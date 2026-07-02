@@ -1,0 +1,27 @@
+{
+  "name": "slidev-theme-artm",
+  "version": "0.1.0",
+  "description": "Thème Slidev officiel de l'ARTM – Autorité Régionale de Transport Métropolitain",
+  "keywords": [
+    "slidev-theme",
+    "slidev",
+    "artm"
+  ],
+  "license": "UNLICENSED",
+  "slidev": {
+    "colorSchema": "light",
+    "defaults": {
+      "aspectRatio": "16/9",
+      "canvasWidth": 980,
+      "transition": "fade"
+    }
+  },
+  "engines": {
+    "slidev": ">=0.52.0"
+  },
+  "dependencies": {
+    "@slidev/cli": "^52.16.0",
+    "@slidev/theme-default": "^0.25.0",
+    "@slidev/theme-seriph": "^0.25.0"
+  }
+}

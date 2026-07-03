@@ -1,23 +1,31 @@
 <script setup lang="ts">
-defineProps<{
+import { computed } from 'vue'
+
+const props = defineProps<{
+  presenterName?: string
   presenter?: string
+  author?: string
   date?: string
   coverBg?: string
   logoSrc?: string
 }>()
+
+const displayPresenter = computed(() =>
+  props.presenterName ?? props.presenter ?? props.author,
+)
 </script>
 
 <template>
   <div class="slidev-layout cover">
-    <img class="cover-bg" :src="coverBg ?? '/artm-bg-cover.png'" alt="" aria-hidden="true" />
-    <img class="cover-logo" :src="logoSrc ?? '/artm-logo.png'" alt="ARTM" />
+    <img class="cover-bg" :src="props.coverBg ?? '/artm-bg-cover.png'" alt="" aria-hidden="true" />
+    <img class="cover-logo" :src="props.logoSrc ?? '/artm-logo.png'" alt="ARTM" />
     <div class="cover-content">
       <slot />
     </div>
-    <div v-if="presenter || date" class="cover-presenter">
-      <div class="cover-label">Présenté par</div>
-      <div v-if="presenter" class="cover-name">{{ presenter }}</div>
-      <div v-if="date" class="cover-date">{{ date }}</div>
+    <div v-if="displayPresenter || props.date" class="cover-presenter">
+      <div v-if="displayPresenter" class="cover-label">Présenté par &nbsp;</div>
+      <div v-if="displayPresenter" class="cover-name">{{ displayPresenter }}</div>
+      <div v-if="props.date" class="cover-date">{{ props.date }}</div>
     </div>
   </div>
 </template>
@@ -87,6 +95,11 @@ defineProps<{
   font-size: 0.72em;
   color: #333333;
   font-weight: 400;
+  display: inline-block;
+}
+
+.cover-name {
+  display: inline-block;
 }
 
 .cover-name,

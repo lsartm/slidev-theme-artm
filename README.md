@@ -58,7 +58,7 @@ theme: ../slidev-theme-artm
 ```yaml
 ---
 layout: cover
-presenter: "Prénom Nom"
+presenterName: "Prénom Nom"
 date: "Janvier 2025"
 ---
 

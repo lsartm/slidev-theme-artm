@@ -4,12 +4,17 @@ defineProps<{
   bgSrc?: string
   iconSrc?: string
 }>()
+
+const withBase = (path: string) => {
+  const base = ((import.meta as any).env?.BASE_URL as string | undefined) ?? '/'
+  return `${base}${path.replace(/^\//, '')}`
+}
 </script>
 
 <template>
   <div class="slidev-layout section">
     <!-- Teal wave background top-left -->
-    <img class="section-bg" :src="bgSrc ?? '/artm-bg-section.png'" alt="" aria-hidden="true" />
+    <img class="section-bg" :src="bgSrc ?? withBase('artm-bg-section.png')" alt="" aria-hidden="true" />
 
     <!-- Large white circle left -->
     <div class="section-circle" />
@@ -17,7 +22,7 @@ defineProps<{
     <!-- Right content -->
     <div class="section-right">
       <div class="section-no-row">
-        <img class="section-arrow" :src="iconSrc ?? '/artm-arrow.png'" alt="" aria-hidden="true" />
+        <img class="section-arrow" :src="iconSrc ?? withBase('artm-arrow.png')" alt="" aria-hidden="true" />
         <span v-if="sectionNo" class="section-num">{{ sectionNo }}</span>
       </div>
       <div class="section-text">

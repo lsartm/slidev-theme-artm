@@ -15,6 +15,14 @@ docker compose up --build
 # → http://localhost:3030
 ```
 
+## Build GitHub Pages
+
+Utiliser l'option native Slidev `--base` pour Pages et garder le routeur en mode `hash` pour eviter les chemins dupliques.
+
+```bash
+npm run build -- --base /slidev-theme-artm/
+```
+
 > Le premier démarrage installe les dépendances dans un volume Docker isolé (~30 s).
 > Les démarrages suivants sont instantanés.
 
@@ -124,7 +132,7 @@ address: "700, rue De La Gauchetière Ouest, bureau 400, Montréal (Québec) H3B
 
 ## Assets publics
 
-Tous les fichiers image sont dans `public/` et servis par Vite à `/artm-*.png` :
+Tous les fichiers image sont dans `public/` et les layouts appliquent automatiquement le `base` de build :
 
 | Fichier | Usage |
 |---|---|

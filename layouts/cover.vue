@@ -13,12 +13,17 @@ const props = defineProps<{
 const displayPresenter = computed(() =>
   props.presenterName ?? props.presenter ?? props.author,
 )
+
+const withBase = (path: string) => {
+  const base = ((import.meta as any).env?.BASE_URL as string | undefined) ?? '/'
+  return `${base}${path.replace(/^\//, '')}`
+}
 </script>
 
 <template>
   <div class="slidev-layout cover">
-    <img class="cover-bg" :src="props.coverBg ?? '/artm-bg-cover.png'" alt="" aria-hidden="true" />
-    <img class="cover-logo" :src="props.logoSrc ?? '/artm-logo.png'" alt="ARTM" />
+    <img class="cover-bg" :src="props.coverBg ?? withBase('artm-bg-cover.png')" alt="" aria-hidden="true" />
+    <img class="cover-logo" :src="props.logoSrc ?? withBase('artm-logo.png')" alt="ARTM" />
     <div class="cover-content">
       <slot />
     </div>

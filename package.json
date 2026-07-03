@@ -21,7 +21,7 @@
   },
   "scripts": {
     "dev": "slidev --open false --remote --port 3030 slides.md",
-    "build": "slidev build slides.md",
+    "build": "slidev build slides.md --routerMode hash",
     "export": "slidev export slides.md"
   },
   "dependencies": {

@@ -49,6 +49,72 @@ theme: ../slidev-theme-artm
 ---
 ```
 
+## Réutilisation pour un autre projet
+
+Les fichiers réutilisables sont dans ce repo:
+
+- `templates/SKILL.md`
+- `templates/project-context.md`
+
+Pour un repo qui réutilise ce thème:
+
+1. Copier `templates/SKILL.md` vers `.github/skills/SKILL.md` dans le repo cible.
+2. Copier `templates/project-context.md` dans `templates/` du repo cible.
+3. Utiliser `templates/project-context.md` pour collecter le contexte.
+4. Utiliser un des prompts ci-dessous dans Copilot Chat.
+5. Générer puis adapter `slides.md` directement a partir du contexte projet.
+
+Structure recommandee dans le repo cible:
+
+```text
+<repo-cible>/
+	.github/
+		skills/
+			SKILL.md
+	templates/
+		project-context.md
+```
+
+### Exemple de prompt (generique)
+
+```md
+Create a Slidev presentation for project [PROJECT_NAME].
+
+Use the Slidev theme and layouts available in this repository.
+
+Audience: [AUDIENCE]
+Goal: [GOAL]
+Slide count: [SLIDE_COUNT]
+Must-have sections: [SECTIONS]
+
+Use placeholders for unknown details and do not invent project facts.
+
+Deliverables:
+1. Complete slides.md
+2. Slide-by-slide outline
+3. Unresolved placeholders list
+4. Docker preview/build commands
+```
+
+### Exemple de prompt (ARTM architecture)
+
+```md
+Create a Slidev presentation for project "Transit Data Hub Modernization".
+
+Audience: Architecture review board and delivery managers
+Goal: Decision support and phase approval
+Slide count: 12
+Must-have sections: Context, options, recommendation, risks, decisions
+
+Constraints:
+- no credentials
+- no personal data
+- no vendor pricing details
+
+Use cover, section, default, two-cols, statement, and end layouts.
+Optimize for GitHub Pages and Docker-first workflow.
+```
+
 ## Mises en page disponibles
 
 | Layout | Frontmatter | Description |

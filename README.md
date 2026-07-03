@@ -20,7 +20,7 @@ docker compose up --build
 Utiliser l'option native Slidev `--base` pour Pages et garder le routeur en mode `hash` pour eviter les chemins dupliques.
 
 ```bash
-npm run build -- --base /slidev-theme-artm/
+npm run build -- --base ./
 ```
 
 > Le premier démarrage installe les dépendances dans un volume Docker isolé (~30 s).

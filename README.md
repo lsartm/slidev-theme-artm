@@ -17,7 +17,7 @@ docker compose up --build
 
 ## Build GitHub Pages
 
-Utiliser l'option native Slidev `--base` pour Pages et garder le routeur en mode `hash` pour eviter les chemins dupliques.
+Utiliser l'option native Slidev `--base` pour Pages. Pour eviter la duplication dans les URLs avec `routerMode: hash`, utiliser une base relative.
 
 ```bash
 npm run build -- --base ./

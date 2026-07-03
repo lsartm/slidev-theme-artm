@@ -3,9 +3,20 @@
   Full dark navy background. Use for mission, vision, or
   any full-bleed statement slide.
 -->
+<script setup lang="ts">
+defineProps<{
+  iconSrc?: string
+}>()
+
+const withBase = (path: string) => {
+  const base = ((import.meta as any).env?.BASE_URL as string | undefined) ?? '/'
+  return `${base}${path.replace(/^\//, '')}`
+}
+</script>
+
 <template>
   <div class="slidev-layout statement">
-    <img class="statement-arrow" :src="iconSrc ?? '/artm-arrow.png'" alt="" aria-hidden="true" />
+    <img class="statement-arrow" :src="iconSrc ?? withBase('artm-arrow.png')" alt="" aria-hidden="true" />
     <div class="statement-content">
       <slot />
     </div>

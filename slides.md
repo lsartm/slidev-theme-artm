@@ -1,8 +1,9 @@
 ---
 theme: ./
+routerMode: hash
 layout: cover
 title: Architecture de solution ARTM
-presenter: Prénom Nom
+presenterName: Prénom Nom
 date: "Janvier 2025"
 ---
 

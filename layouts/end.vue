@@ -7,17 +7,23 @@ defineProps<{
   address?: string
   website?: string
   logoSrc?: string
+  iconSrc?: string
 }>()
+
+const withBase = (path: string) => {
+  const base = ((import.meta as any).env?.BASE_URL as string | undefined) ?? '/'
+  return `${base}${path.replace(/^\//, '')}`
+}
 </script>
 
 <template>
   <div class="slidev-layout end">
     <div class="end-content">
-      <img class="end-arrow" :src="iconSrc ?? '/artm-arrow.png'" alt="" aria-hidden="true" />
+      <img class="end-arrow" :src="iconSrc ?? withBase('artm-arrow.png')" alt="" aria-hidden="true" />
       <slot />
     </div>
     <div class="end-branding">
-      <img :src="logoSrc ?? '/artm-logo-white.png'" class="end-logo" alt="ARTM" />
+      <img :src="logoSrc ?? withBase('artm-logo-white.png')" class="end-logo" alt="ARTM" />
       <div class="end-info">
         <div v-if="website" class="end-website">{{ website }}</div>
         <div v-if="address" class="end-address" v-html="address"></div>

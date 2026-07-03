@@ -1,8 +1,17 @@
-# slidev-theme-artm
+# Slidev - Thème ARTM
 
-Thème Slidev officiel de l'**ARTM** – Autorité Régionale de Transport Métropolitain.
+Thème Slidev de l'**ARTM** – Autorité Régionale de Transport Métropolitain.
 
 Converti depuis le gabarit PowerPoint `GabaritComitéArch_Architecture de solutions TI - ARTM.potx`.
+
+Afin de faciliter l'adoption de cet outil, un thème Slidev aux couleurs de l'ARTM a été développé. Celui-ci permet de produire rapidement des présentations respectant l'identité visuelle de l'organisation tout en bénéficiant des avantages d'une approche moderne, collaborative et orientée automatisation.
+Cette solution est particulièrement intéressante pour les architectes, analystes, spécialistes M365, équipes TI et toute personne produisant régulièrement de la documentation technique, des formations ou des présentations de projets.
+
+## Slidev
+
+Slidev est un outil de création de présentations basé sur Markdown, conçu à l'origine pour les développeurs et les spécialistes des technologies. Contrairement à PowerPoint, les diapositives sont décrites sous forme de texte dans un fichier source, puis générées automatiquement en une présentation moderne, interactive et entièrement personnalisable. Slidev permet également d'intégrer facilement du code source, des démonstrations interactives, des diagrammes et des composants Web.
+
+https://sli.dev/
 
 ## Prérequis
 
@@ -14,9 +23,6 @@ Converti depuis le gabarit PowerPoint `GabaritComitéArch_Architecture de soluti
 docker compose up --build
 # → http://localhost:3030
 ```
-
-> Le premier démarrage installe les dépendances dans un volume Docker isolé (~30 s).
-> Les démarrages suivants sont instantanés.
 
 Pour arrêter :
 
@@ -33,12 +39,80 @@ docker compose up --build
 
 ## Installation dans une présentation
 
+![alt text](assets/image.png)
+
 ```yaml
 ---
 theme: slidev-theme-artm          # publié sur npm
 # ou chemin local :
 theme: ../slidev-theme-artm
 ---
+```
+
+## Réutilisation pour un autre projet
+
+Les fichiers réutilisables sont dans ce repo:
+
+- `templates/SKILL.md`
+- `templates/project-context.md`
+
+Pour un repo qui réutilise ce thème:
+
+1. Copier `templates/SKILL.md` vers `.github/skills/SKILL.md` dans le repo cible.
+2. Copier `templates/project-context.md` dans `templates/` du repo cible.
+3. Utiliser `templates/project-context.md` pour collecter le contexte.
+4. Utiliser un des prompts ci-dessous dans Copilot Chat.
+5. Générer puis adapter `slides.md` directement a partir du contexte projet.
+
+Structure recommandee dans le repo cible:
+
+```text
+<repo-cible>/
+	.github/
+		skills/
+			SKILL.md
+	templates/
+		project-context.md
+```
+
+### Exemple de prompt (generique)
+
+```md
+Create a Slidev presentation for project [PROJECT_NAME].
+
+Use the Slidev theme and layouts available in this repository.
+
+Audience: [AUDIENCE]
+Goal: [GOAL]
+Slide count: [SLIDE_COUNT]
+Must-have sections: [SECTIONS]
+
+Use placeholders for unknown details and do not invent project facts.
+
+Deliverables:
+1. Complete slides.md
+2. Slide-by-slide outline
+3. Unresolved placeholders list
+4. Docker preview/build commands
+```
+
+### Exemple de prompt (ARTM architecture)
+
+```md
+Create a Slidev presentation for project "Transit Data Hub Modernization".
+
+Audience: Architecture review board and delivery managers
+Goal: Decision support and phase approval
+Slide count: 12
+Must-have sections: Context, options, recommendation, risks, decisions
+
+Constraints:
+- no credentials
+- no personal data
+- no vendor pricing details
+
+Use cover, section, default, two-cols, statement, and end layouts.
+Optimize for GitHub Pages and Docker-first workflow.
 ```
 
 ## Mises en page disponibles
@@ -58,7 +132,7 @@ theme: ../slidev-theme-artm
 ```yaml
 ---
 layout: cover
-presenter: "Prénom Nom"
+presenterName: "Prénom Nom"
 date: "Janvier 2025"
 ---
 
@@ -110,32 +184,3 @@ address: "700, rue De La Gauchetière Ouest, bureau 400, Montréal (Québec) H3B
 
 # Merci !
 ```
-
-## Palette ARTM2021
-
-| Variable CSS | Hex | Usage |
-|---|---|---|
-| `--artm-primary` | `#003C60` | Titres, arrière-plans foncés |
-| `--artm-teal` | `#00B1AC` | Accents, séparateurs |
-| `--artm-blue` | `#0089DC` | Accent secondaire |
-| `--artm-coral` | `#FF7171` | Accent chaud |
-| `--artm-green` | `#71BD50` | Liens, succès |
-| `--artm-bg-light` | `#EFF4F6` | Fond clair |
-
-## Assets publics
-
-Tous les fichiers image sont dans `public/` et servis par Vite à `/artm-*.png` :
-
-| Fichier | Usage |
-|---|---|
-| `artm-logo.png` | Logo ARTM couleur |
-| `artm-logo-grey.png` | Logo ARTM gris |
-| `artm-logo-white.png` | Logo ARTM blanc |
-| `artm-icon.png` | Icône `>` ARTM |
-| `artm-bg-cover.png` | Fond vague teal (cover, section) |
-| `artm-bg-section.png` | Fond page de section |
-| `artm-bg-subsection.png` | Fond page de sous-section |
-| `artm-bus-corner.png` | Illustration bus coin inférieur droit |
-| `artm-arrow.png` | Flèche décorative |
-
-> Ces assets sont la **source unique** – l'addon `slidev-addon-artm` les utilise via `/artm-*.png` sans les dupliquer.

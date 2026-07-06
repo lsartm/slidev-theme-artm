@@ -1,3 +1,30 @@
+<!--
+  Usage:
+```md
+---
+layout: two-cols
+---
+
+# Left
+This shows on the left
+
+::header::
+This spans both
+
+::right::
+
+# Right
+This shows on the right
+
+
+<style>
+.tc-header {
+  ...
+}
+</style>
+```
+-->
+
 <script setup lang="ts">
 defineProps<{
   docTitle?: string

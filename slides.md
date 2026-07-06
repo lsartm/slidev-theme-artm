@@ -103,6 +103,39 @@ subSectionNo: 4.1
 ## Résultat de la vigie
 
 ---
+layout: two-cols
+---
+
+- Décrire la vigie et en faire un résumé.
+- Il faut faire un résumé de la vigie correspondante (ou de l’ensemble des vigies pertinentes).   Ici on fait des choix par rapport à la vigie qui sont pertinents aux choix qui ont été faits pour la solution présentée.
+- Mettre les liens vers les vigies pour pleine transparence.
+
+::header::
+# Architecture cible
+## Résultat de la vigie
+
+::right::
+
+```plantuml
+@startchart
+title Titre de la figure
+h-axis [2019, 2020, 2021]
+v-axis 0 --> 2.50
+bar "Lorem ipsum" [1.5, 1.4, 1.4] #003C60 labels
+bar "Lorem ipsum 2" [1.45, 1.2, 1.3] #347272 labels
+bar "Lorem ipsum 3" [1.75, 1.9, 1.9] #FF7171 labels
+bar "Lorem ipsum 4" [1.45, 1.8, 1.8] #00B1AC labels
+legend bottom
+@endchart
+```
+
+<style>
+.tc-header :deep(h2) {
+  color: var(--artm-teal);
+}
+</style>
+
+---
 layout: statement
 ---
 

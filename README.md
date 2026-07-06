@@ -75,44 +75,74 @@ Structure recommandee dans le repo cible:
 		project-context.md
 ```
 
-### Exemple de prompt (generique)
+### Exemple de prompt (générique)
 
 ```md
-Create a Slidev presentation for project [PROJECT_NAME].
+Génère une présentation Slidev complète en français.
 
-Use the Slidev theme and layouts available in this repository.
+Lis :
 
-Audience: [AUDIENCE]
-Goal: [GOAL]
-Slide count: [SLIDE_COUNT]
-Must-have sections: [SECTIONS]
+- slides.md
+- project-context.md
+- toute la documentation du dépôt
 
-Use placeholders for unknown details and do not invent project facts.
+Respecte toutes les règles définies dans SKILL.md.
 
-Deliverables:
-1. Complete slides.md
-2. Slide-by-slide outline
-3. Unresolved placeholders list
-4. Docker preview/build commands
+Utilise slides.md comme blueprint officiel.
+
+Génère toutes les diapositives applicables.
+
+Complète les sections autant que possible.
+
+Ajoute des diagrammes Mermaid lorsque pertinent.
+
+Produis :
+
+1. slides.md complet
+2. Plan des diapositives
+3. Hypothèses
+4. Éléments manquants
 ```
 
 ### Exemple de prompt (ARTM architecture)
 
 ```md
-Create a Slidev presentation for project "Transit Data Hub Modernization".
+Génère une présentation d'architecture complète en français utilisant le thème Slidev ARTM.
 
-Audience: Architecture review board and delivery managers
-Goal: Decision support and phase approval
-Slide count: 12
-Must-have sections: Context, options, recommendation, risks, decisions
+Avant de commencer :
 
-Constraints:
-- no credentials
-- no personal data
-- no vendor pricing details
+1. Lire slides.md et l'utiliser comme blueprint officiel.
+2. Lire project-context.md.
+3. Analyser tout le contenu du dépôt.
 
-Use cover, section, default, two-cols, statement, and end layouts.
-Optimize for GitHub Pages and Docker-first workflow.
+Analyser notamment :
+
+- Architecture
+- Exigences
+- Gouvernance
+- Sécurité
+- Exploitation
+- FinOPS
+
+Exigences :
+
+- Générer toutes les diapositives du blueprint applicables.
+- Compléter toutes les sections.
+- Générer des diagrammes Mermaid lorsque pertinent.
+- Produire les vues contextuelle, fonctionnelle, applicative, données et opérationnelle.
+- Produire les risques, la feuille de route et les recommandations.
+- Ne pas produire un squelette de présentation.
+- Ne pas inventer de faits.
+
+La présentation finale doit être prête à être présentée et compréhensible sans devoir consulter la documentation source.
+
+Produire :
+
+1. slides.md complet
+2. Plan des diapositives
+3. Hypothèses
+4. Éléments manquants
+5. Diagrammes suggérés mais impossibles à générer faute d'information
 ```
 
 ## Mises en page disponibles

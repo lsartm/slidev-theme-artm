@@ -1,218 +1,322 @@
 ---
 name: project-slides
-description: Generate professional Slidev presentations using the ARTM Slidev theme.
+description: Génère des présentations Slidev professionnelles en utilisant le thème ARTM.
 ---
 
 # ARTM Slidev Presentation Skill
 
-This skill helps GitHub Copilot generate professional presentations using the ARTM Slidev theme.
+Cette compétence permet de générer des présentations professionnelles utilisant le thème Slidev ARTM.
 
-The objective is to produce presentation-ready Slidev decks that are visually consistent, concise, executive-friendly, reusable, and aligned with project objectives.
+L'objectif est de produire une présentation complète, cohérente et prête à être présentée avec un minimum de modifications manuelles.
 
-## Setup In Target Repository
+---
 
-1. Copy this file to `.github/skills/SKILL.md`.
-2. Copy supporting templates:
-	- `templates/project-context.md`
-3. Optional: add these templates in the target repository if you maintain them there:
-	- `templates/reusable-prompt.md`
-	- `templates/slides.blueprint.md`
-4. Complete `project-context.md`.
-5. Open GitHub Copilot Chat in the target repository.
-6. Ask Copilot to generate the presentation.
+# Language Requirements
 
-Example prompt:
+Tout le contenu généré doit être rédigé en français.
 
-```text
-Generate a complete Slidev presentation based on project-context.md using the ARTM theme.
-```
+Cela inclut :
 
-## Required Inputs
+- Titres de diapositives
+- Sous-titres
+- Contenu
+- Tableaux
+- Diagrammes Mermaid
+- Recommandations
+- Risques
+- Plans de réalisation
+- Descriptions d'architecture
+- Conclusions
 
-Use all relevant repository content when generating a presentation.
+Exceptions autorisées :
 
-Priority sources:
+- Noms de produits
+- Noms de services
+- Noms de technologies
+- Noms Microsoft officiels
+- Syntaxe YAML
+- Syntaxe Markdown
+- Code source
+- Commandes
 
-- `project-context.md`
+Même si la documentation source est en anglais, la présentation finale doit être en français.
 
-Optional priority sources when present:
+---
 
-- `reusable-prompt.md`
-- `slides.blueprint.md`
+# Source Priority
 
-Additional sources:
+Avant de générer le contenu :
 
-- Architecture documents
-- Project charters
-- Business cases
-- RFCs
-- ADRs
-- Requirements
-- User stories
-- Backlog items
-- Meeting notes
-- Governance documentation
-- Security documentation
-- Operational documentation
+1. Lire slides.md à la racine du dépôt.
+2. Lire project-context.md si disponible.
+3. Lire toute la documentation du dépôt.
+4. Lire les documents d'architecture.
+5. Lire les documents de gouvernance.
+6. Lire les exigences et les récits.
+7. Lire les diagrammes existants.
 
-Never ignore relevant repository content.
+Toujours analyser le contenu du dépôt avant de générer les diapositives.
 
-## Content Discovery Requirements
+---
 
-Before generating slides:
+# Presentation Blueprint
 
-1. Analyze the repository.
-2. Identify project objectives.
-3. Identify stakeholders.
-4. Identify architecture elements.
-5. Identify risks.
-6. Identify decisions.
-7. Identify delivery milestones.
-8. Identify governance constraints.
-9. Identify security requirements.
-10. Identify operational considerations.
+Le fichier :
 
-Extract as much information as possible before creating slides.
+slides.md
 
-Do not generate a presentation solely from `project-context.md` if additional relevant information exists.
+est la source officielle du modèle de présentation.
 
-## Golden Rules
+Il définit :
 
-### Do Not Invent Facts
+- la structure
+- les layouts
+- les sections
+- les sous-sections
+- l'enchaînement narratif
+- les exemples
 
-Never invent:
+Toujours respecter la structure définie dans slides.md.
 
-- Project status
-- Dates
-- Costs
-- Risks
-- Architectural decisions
-- Milestones
-- Dependencies
-- Resource assignments
-- Technical details
+Ne jamais inventer une autre structure lorsque slides.md fournit déjà un modèle.
 
-If information is unavailable:
+---
 
-- Use placeholders
-- State assumptions explicitly
-- Add unresolved questions
+# Standard ARTM Presentation Structure
 
-### One Message Per Slide
+La présentation ARTM standard contient environ 30 diapositives.
 
-Each slide must communicate one primary idea.
+Sauf indication contraire, générer toutes les diapositives applicables du blueprint.
 
-Avoid:
+Structure attendue :
 
-- Multiple unrelated topics
-- Excessive information density
-- Large text blocks
+01. Couverture
 
-Prefer:
+02. Contexte et objectif
 
-- Clear takeaways
-- Concise bullets
-- Diagrams
-- Tables
-- Visual summaries
+Section — Mise en contexte
 
-### Executive First
+03. Historique
 
-Lead with conclusions. Before presenting details, include:
+04. Motivations et objectifs
 
-1. Recommendation
-2. Impact
-3. Benefits
-4. Risks
-5. Supporting information
+Section — Contraintes
 
-Decision-makers should understand the key message in less than 30 seconds.
+05. Contraintes d'affaires et technologiques
 
-### Minimal Narrative
+Section — Exigences
 
-Avoid long paragraphs.
+06. Exigences obligatoires
 
-Preferred content:
+07. Exigences non fonctionnelles
 
-- Bullets
-- Tables
-- Diagrams
-- Timelines
-- Architecture views
-- Comparison matrices
+Section — Architecture cible
 
-## Presentation Completeness
+08. Résultats de la vigie
 
-The objective is to generate a complete presentation, not a skeleton.
+09. Requis fonctionnels
 
-Whenever sufficient information is available:
+10. Description de la solution
 
-- Populate all slides with meaningful content.
-- Expand all sections.
-- Add supporting rationale.
-- Add impacts and outcomes.
-- Add architecture content.
-- Add governance content.
-- Add security content.
-- Add operational content.
-- Add implementation considerations.
-- Add recommendations.
+11. Vue contextuelle
 
-Avoid:
+12. Vue fonctionnelle ou applicative
 
-- Empty slides
-- Placeholder-only slides
-- Single bullet point slides
-- Slides containing only titles
-- "To be completed" sections when information exists
+13. Vue des données
 
-Every slide must provide value.
+14. Vue opérationnelle
 
-The generated deck should be presentation-ready with minimal manual editing.
+15. Qualité globale
 
-Only use placeholders when information is genuinely unavailable.
+Section — Stratégie de réalisation
 
-## Slide Generation Strategy
+16. Réalisation
 
-When generating a presentation:
+17. FinOPS
 
-1. Analyze available content.
-2. Extract facts.
-3. Build a coherent narrative.
-4. Populate every applicable slide.
-5. Generate diagrams whenever relevant.
-6. Generate tables whenever relevant.
-7. Explain recommendations.
-8. Explain trade-offs.
-9. Explain impacts.
-10. Explain risks.
-11. Explain the implementation approach.
+18. Planification
 
-The final deck should be a complete first version, not a draft outline.
+Section — Annexe
 
-## Theme and Repository Rules
+19. Aiguilleur CAM
 
-1. Use repository layouts: `cover`, `section`, `subsection`, `default`, `two-cols`, `statement`, `end`.
-2. Keep output compatible with static hosting (GitHub Pages).
-3. Include Docker-first preview/build commands.
+Clôture
 
-## Required Outputs
+20. Statement
 
-1. `slides.md`
-2. Slide-by-slide outline
-3. Unresolved placeholders list
-4. Docker commands
+21. Merci
 
-## Recommended Deck Flow
+Les détails d'implémentation demeurent définis dans slides.md.
 
-1. Cover
-2. Objective
-3. Context and problem
-4. Current state
-5. Target state
-6. Options and trade-offs
-7. Recommendation
-8. Plan and milestones
-9. Risks and mitigations
-10. Decisions and next steps
-11. End
+---
+
+# Completeness Requirement
+
+L'objectif est de générer une présentation complète.
+
+Ne pas générer :
+
+- de squelette de présentation
+- de présentation vide
+- de sections incomplètes
+- de diapositives contenant uniquement des espaces réservés lorsque l'information existe
+
+Lorsque l'information est disponible :
+
+- compléter toutes les diapositives
+- compléter toutes les sections
+- créer les diagrammes nécessaires
+- créer les tableaux nécessaires
+- détailler les recommandations
+- détailler les enjeux
+- détailler les décisions
+
+La présentation finale doit être considérée comme une première version complète et non comme un brouillon.
+
+---
+
+# Facts And Assumptions
+
+Ne jamais inventer :
+
+- dates
+- budgets
+- coûts
+- échéanciers
+- risques
+- décisions
+- états d'avancement
+- recommandations
+
+Lorsque l'information est absente :
+
+- utiliser des espaces réservés
+- documenter les hypothèses
+- documenter les éléments manquants
+
+---
+
+# Audience Adaptation
+
+Adapter la présentation à l'audience cible.
+
+Exemples :
+
+- Comité exécutif
+- Comité directeur
+- CAM
+- Parties prenantes d'affaires
+- Architectes
+- Sécurité
+- Exploitation
+- Équipes techniques
+
+Adapter le niveau de détail selon l'audience.
+
+---
+
+# One Message Per Slide
+
+Chaque diapositive doit communiquer une idée principale.
+
+Privilégier :
+
+- Diagrammes
+- Tableaux
+- Vues d'architecture
+- Résumés visuels
+
+Éviter :
+
+- Longs paragraphes
+- Répétition
+- Texte inutile
+
+---
+
+# Architecture Expectations
+
+Lorsque le contenu d'architecture est disponible, générer :
+
+- Vue contextuelle
+- Vue logique
+- Vue fonctionnelle
+- Vue applicative
+- Vue données
+- Vue opérationnelle
+
+Compléter toutes les vues applicables du blueprint.
+
+---
+
+# Diagram Guidance
+
+Privilégier Mermaid lorsque pertinent.
+
+Exemples :
+
+- Diagrammes de contexte
+- Architecture logique
+- Architecture applicative
+- Flux de données
+- Flux de processus
+- Séquences
+- Interactions systèmes
+
+Diviser les diagrammes trop complexes en plusieurs diapositives.
+
+---
+
+# Microsoft 365 Projects
+
+Lorsque pertinent traiter :
+
+- SharePoint
+- Teams
+- OneDrive
+- Power Platform
+- Copilot
+- Entra ID
+- Exchange Online
+- Purview
+- Defender
+- Azure
+
+Inclure :
+
+- Gouvernance
+- Sécurité
+- Conformité
+- Adoption
+- Exploitation
+- Gestion du cycle de vie
+
+lorsque pertinent.
+
+---
+
+# Quality Checklist
+
+Avant de terminer :
+
+- Blueprint respecté
+- Toutes les diapositives applicables générées
+- Diagrammes générés lorsque pertinents
+- Hypothèses documentées
+- Éléments manquants documentés
+- Terminologie cohérente
+- Aucun fait inventé
+- Présentation prête à être présentée
+
+---
+
+# Required Outputs
+
+Produire :
+
+1. slides.md complet
+2. Plan détaillé des diapositives
+3. Hypothèses
+4. Éléments manquants
+5. Diagrammes recommandés
+6. Instructions de compilation

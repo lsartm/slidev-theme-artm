@@ -1,91 +1,212 @@
-# Project Context Template
+# Presentation Context
 
-Use this file to collect minimum information needed to generate a Slidev project deck.
+## Langue
 
-## Project Identification
+Français
 
-- Project name:
-- Project owner:
-- Presenter:
-- Date:
-- Version:
+---
 
-## Purpose
+## Informations générales
 
-- One-line purpose:
-- Business driver:
-- Problem to solve:
-- Expected outcome:
+Nom du projet :
 
-## Audience
+Titre de la présentation :
 
-- Primary audience:
-- Secondary audience:
-- Technical depth:
-- Expected decision-makers:
+Présentateur :
 
-## Current State
+Audience :
 
-- Current process or solution:
-- Main pain points:
-- Known limitations:
-- Dependencies:
+Date :
 
-## Target State
+Version :
 
-- Target outcome:
-- Proposed solution:
-- Architecture direction:
-- Governance considerations:
-- Security considerations:
-- Operational considerations:
+Durée estimée :
 
-## Options
+---
 
-### Option A
+## Objectif de la présentation
 
-- Description:
-- Benefits:
-- Limitations:
-- Cost or effort:
-- Risks:
+Que doit comprendre, approuver, décider ou retenir l'audience ?
 
-### Option B
+---
 
-- Description:
-- Benefits:
-- Limitations:
-- Cost or effort:
-- Risks:
+## Résultat attendu
 
-## Recommendation
+- [ ] Information
+- [ ] Recommandation
+- [ ] Approbation
+- [ ] Financement
+- [ ] Révision d'architecture
+- [ ] Go / No-Go
+- [ ] Orientation stratégique
 
-- Recommended option:
-- Rationale:
-- Key trade-offs:
-- Assumptions:
+---
 
-## Delivery Plan
+## Résumé exécutif
 
-| Milestone | Target Date | Owner | Notes |
-|---|---|---|---|
-| [MILESTONE_1] | [DATE] | [OWNER] | [NOTES] |
-| [MILESTONE_2] | [DATE] | [OWNER] | [NOTES] |
+---
 
-## Risks
+## Contexte
 
-| Risk | Impact | Probability | Mitigation | Owner |
-|---|---|---|---|---|
-| [RISK_1] | [IMPACT] | [PROBABILITY] | [MITIGATION] | [OWNER] |
+---
 
-## Decisions Needed
+## Historique
 
-| Decision | Required By | Decision Owner | Notes |
-|---|---|---|---|
-| [DECISION_1] | [DATE] | [OWNER] | [NOTES] |
+---
 
-## Sensitive Content Constraints
+## Motivations d'affaires
 
-- Information to exclude:
-- Information requiring validation:
-- Information requiring approval before publishing:
+---
+
+## Problèmes à résoudre
+
+---
+
+## Objectifs
+
+---
+
+## Contraintes d'affaires
+
+---
+
+## Contraintes technologiques
+
+---
+
+## Hypothèses
+
+---
+
+## Dépendances
+
+---
+
+## Exigences obligatoires
+
+---
+
+## Exigences fonctionnelles
+
+---
+
+## Exigences non fonctionnelles
+
+- Sécurité
+- Disponibilité
+- Performance
+- Résilience
+- Maintenabilité
+- Observabilité
+- Conformité
+- Accessibilité
+
+---
+
+## Résultats de la vigie
+
+Technologies évaluées :
+
+### Option 1
+
+Avantages :
+
+Inconvénients :
+
+Recommandation :
+
+### Option 2
+
+Avantages :
+
+Inconvénients :
+
+Recommandation :
+
+---
+
+## Solution recommandée
+
+---
+
+## Architecture
+
+### Vue contextuelle
+
+### Vue logique
+
+### Vue fonctionnelle
+
+### Vue applicative
+
+### Vue données
+
+### Vue opérationnelle
+
+---
+
+## Gouvernance
+
+---
+
+## Sécurité
+
+---
+
+## Exploitation
+
+---
+
+## Qualité globale
+
+- Sécurité
+- Résilience
+- Maintenabilité
+- Performance
+- Observabilité
+- Accessibilité
+
+---
+
+## Stratégie de réalisation
+
+---
+
+## Stratégie de migration
+
+---
+
+## FinOPS
+
+---
+
+## Feuille de route
+
+| Jalon | Date | Notes |
+|---------|---------|---------|
+
+---
+
+## Risques
+
+| Risque | Impact | Probabilité | Atténuation |
+|---------|---------|---------|---------|
+
+---
+
+## Décisions requises
+
+| Décision | Responsable | Échéance |
+|-----------|-----------|-----------|
+
+---
+
+## Instructions particulières
+
+---
+
+## Informations à exclure
+
+---
+
+## Informations manquantes connues

@@ -17,7 +17,7 @@
   --artm-body:       #000000;
   --artm-bg:         #FFFFFF;
   --artm-darkGrey:   #333333;
-  --artm-white:      rgba(255,255,255,1);
+  --artm-white:      255 255 255;
 
   /* Slidev theme aliases */
   --slidev-theme-primary:    var(--artm-primary);
@@ -122,7 +122,7 @@
 .slidev-layout.section h1 {
   font-size: 2em;
   font-weight: 700;
-  color: #ffffff;
+  color: rgb(var(--artm-white) / 100%);
   line-height: 1.2;
   text-align: center;
   margin: 0;
@@ -132,7 +132,7 @@
 .slidev-layout.section p {
   font-size: 1.2em;
   font-weight: 700;
-  color: #ffffff;
+  color: rgb(var(--artm-white) / 100%);
   text-align: center;
   margin: 0.2em 0 0;
 }
@@ -149,14 +149,14 @@
 .slidev-layout.statement h1 {
   font-size: 2em;
   font-weight: 700;
-  color: #ffffff;
+  color: rgb(var(--artm-white) / 100%);
   text-align: center;
   margin: 0;
 }
 
 .slidev-layout.statement p {
   font-size: 1.1em;
-  color: #ffffff;
+  color: rgb(var(--artm-white) / 100%);
   text-align: center;
   margin: 0.5em 0 0;
 }
@@ -181,7 +181,7 @@
 
 .slidev-layout.end p {
   font-size: 1em;
-  color: rgba(255, 255, 255, 0.8);
+  color: rgb(var(--artm-white) / 80%);
   text-align: center;
   margin: 0.5em 0 0;
 }
@@ -315,7 +315,7 @@
 
 .slidev-layout th {
   background-color: var(--artm-primary);
-  color: #ffffff;
+  color: rgb(var(--artm-white) / 100%);
   font-weight: 700;
   padding: 0.4em 0.6em;
   text-align: left;

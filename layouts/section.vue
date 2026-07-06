@@ -94,7 +94,7 @@ const withBase = (path: string) => {
 .section-num {
   font-size: 8em;
   font-weight: 700;
-  color: var(--artm-white, #FFFFFF);
+  color: rgb(var(--artm-white) / 100%);
   line-height: 1;
 }
 
@@ -111,7 +111,7 @@ const withBase = (path: string) => {
 .section-text :deep(h1) {
   font-size: 2em;
   font-weight: 700;
-  color: #ffffff;
+  color: rgb(var(--artm-white) / 100%);
   line-height: 1.2;
   margin: 0;
 }
@@ -120,7 +120,7 @@ const withBase = (path: string) => {
 .section-text :deep(p) {
   font-size: 1em;
   font-weight: 700;
-  color: rgba(var(--artm-white-rgb, 255, 255, 255), 0.85);
+  color: rgb(var(--artm-white) / 85%);
   margin: 2em 0 0;
 }
 </style>

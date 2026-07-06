@@ -51,7 +51,7 @@ const withBase = (path: string) => {
 .statement-content :deep(h2) {
   font-size: 2em;
   font-weight: 700;
-  color: var(--artm-white, #FFFFFF);
+  color: rgb(var(--artm-white) / 100%);
   line-height: 1.25;
   margin: 0 0 0.4em;
   text-align: left;

@@ -58,7 +58,7 @@ const withBase = (path: string) => {
 .end-content :deep(h1) {
   font-size: 4.5em;
   font-weight: 700;
-  color: var(--artm-white, #FFFFFF);
+  color: rgb(var(--artm-white) / 100%);
   line-height: 1.1;
   margin: 0;
   display: inline-block;
@@ -67,7 +67,7 @@ const withBase = (path: string) => {
 
 .end-content :deep(p) {
   font-size: 1em;
-  color: rgba(var(--artm-white, 255, 255, 255), 0.75);
+  color: rgb(var(--artm-white) / 75%);
   margin: 0.6em 0 0;
 }
 
@@ -88,13 +88,13 @@ const withBase = (path: string) => {
 .end-info {
   margin-left: 100px;
   text-align: left;
-  color: rgba(var(--artm-white, 255, 255, 255), 0.75);
+  color: rgb(var(--artm-white) / 75%);
 }
 
 .end-address,
 .end-website {
   font-size: 0.55em;
-  color: rgba(var(--artm-white, 255, 255, 255), 0.6);
+  color: rgb(var(--artm-white) / 60%);
   font-weight: 700;
   margin-top: 4px;
   line-height: 1.4;

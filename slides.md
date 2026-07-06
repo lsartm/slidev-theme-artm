@@ -1,10 +1,19 @@
 ---
 theme: ./
+favicon: https://www.artm.quebec/wp-content/themes/adviztheme-child/assets/ico/favicon-96x96.png
+info: |
+  Gabarit Slidev ARTM pour les présentations au comité d’architecture.
+  À adapter par les équipes techniques selon leur initiative.
 routerMode: hash
 layout: cover
 title: Architecture de solution ARTM
 presenterName: Prénom Nom
 date: "Janvier 2025"
+fonts:
+  sans: Arial
+htmlAttrs:
+  dir: ltr
+  lang: fr
 ---
 
 # Architecture de solution

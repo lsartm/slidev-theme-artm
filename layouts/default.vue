@@ -9,14 +9,7 @@ defineProps<{
     <div class="slide-inner">
       <slot />
     </div>
-    <footer class="artm-footer">
-      <div class="footer-left">
-        <span v-if="docTitle">{{ docTitle }}</span>
-      </div>
-      <div class="footer-right">
-        <slot name="pageNo" />
-      </div>
-    </footer>
+    <Footer :document-title="String($attrs.documentTitle ||  $slidev.configs.title || 'Titre du document')" />
   </div>
 </template>
 

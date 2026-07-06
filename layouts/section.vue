@@ -38,10 +38,9 @@ const withBase = (path: string) => {
   overflow: hidden;
   width: 100%;
   height: 100%;
-  background-color: #003C60;
+  background-color: var(--artm-primary, #003C60);
   display: flex;
   align-items: center;
-  font-family: Arial, 'Helvetica Neue', sans-serif;
 }
 
 .section-bg {
@@ -64,7 +63,7 @@ const withBase = (path: string) => {
   width: 43%;
   aspect-ratio: 1;
   border-radius: 50%;
-  background-color: #EFF4F6;
+  background-color: var(--artm-bg-light, #EFF4F6);
   flex-shrink: 0;
 }
 
@@ -95,7 +94,7 @@ const withBase = (path: string) => {
 .section-num {
   font-size: 8em;
   font-weight: 700;
-  color: #ffffff;
+  color: var(--artm-white, #FFFFFF);
   line-height: 1;
 }
 
@@ -121,7 +120,7 @@ const withBase = (path: string) => {
 .section-text :deep(p) {
   font-size: 1em;
   font-weight: 700;
-  color: rgba(255, 255, 255, 0.85);
+  color: rgba(var(--artm-white-rgb, 255, 255, 255), 0.85);
   margin: 2em 0 0;
 }
 </style>

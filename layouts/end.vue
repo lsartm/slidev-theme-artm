@@ -35,7 +35,7 @@ const withBase = (path: string) => {
 
 <style scoped>
 .end {
-  background-color: #003C60;
+  background-color: var(--artm-primary, #003C60);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -43,7 +43,6 @@ const withBase = (path: string) => {
   overflow: hidden;
   width: 100%;
   height: 100%;
-  font-family: Arial, 'Helvetica Neue', sans-serif;
 }
 
 .end-arrow {
@@ -59,7 +58,7 @@ const withBase = (path: string) => {
 .end-content :deep(h1) {
   font-size: 4.5em;
   font-weight: 700;
-  color: rgba(255, 255, 255);
+  color: var(--artm-white, #FFFFFF);
   line-height: 1.1;
   margin: 0;
   display: inline-block;
@@ -68,7 +67,7 @@ const withBase = (path: string) => {
 
 .end-content :deep(p) {
   font-size: 1em;
-  color: rgba(255, 255, 255, 0.75);
+  color: rgba(var(--artm-white, 255, 255, 255), 0.75);
   margin: 0.6em 0 0;
 }
 
@@ -89,13 +88,13 @@ const withBase = (path: string) => {
 .end-info {
   margin-left: 100px;
   text-align: left;
-  color: rgba(255, 255, 255, 0.75);
+  color: rgba(var(--artm-white, 255, 255, 255), 0.75);
 }
 
 .end-address,
 .end-website {
   font-size: 0.55em;
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(var(--artm-white, 255, 255, 255), 0.6);
   font-weight: 700;
   margin-top: 4px;
   line-height: 1.4;

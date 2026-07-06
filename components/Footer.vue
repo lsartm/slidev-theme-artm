@@ -6,7 +6,7 @@
       </div>
       <div class="artm-footer__title">{{ documentTitle }}</div>
     </div>
-    <div class="artm-footer__page"><SlideCurrentNo /> / <SlidesTotal /></div>
+    <div class="artm-footer__page"><SlideCurrentNo /></div>
   </footer>
 </template>
 
@@ -22,20 +22,3 @@ const withBase = (path: string) => {
   return `${base}${path.replace(/^\//, '')}`
 }
 </script>
-
-<style scoped>
-.artm-footer__brand,
-.artm-footer__brand > img,
-.artm-footer__title {
-  display: inline-block;
-}
-.artm-footer__brand::after {
-  content: '⟩';
-  display: inline-block;
-  margin: 0 0.5em;
-  color: #6a6c70;
-}
-.artm-footer__title {
-  vertical-align: text-top;
-}
-</style>

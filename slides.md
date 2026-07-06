@@ -6,9 +6,11 @@ info: |
   À adapter par les équipes techniques selon leur initiative.
 routerMode: hash
 layout: cover
-title: Architecture de solution ARTM
-presenterName: Prénom Nom
-date: "Janvier 2025"
+title: Titre du document
+author: Prénom Nom
+date: "Date"
+keywords: artm,architecture
+
 fonts:
   sans: Arial
 htmlAttrs:
@@ -21,62 +23,84 @@ htmlAttrs:
 Sous-titre – projet, initiative, etc.
 
 ---
-layout: default
+layout: agenda
 ---
 
-# Diapositive standard
-
-## Sous-titre optionnel
-
-Voici un paragraphe de contenu. Le texte est aligné à gauche avec une ligne teal séparant le titre du corps.
-
-- Premier point de la liste
-- Deuxième point avec un peu plus de détails
-- Troisième point
-  - Sous-point A
-  - Sous-point B
+# Contenu de la présentation
 
 ---
 layout: section
 sectionNo: 01
 ---
 
-# Titre de la section
-
-Sous-titre de la section
+# Mise en contexte
 
 ---
-layout: subsection
-subSectionNo: 1.2
+layout: default
 ---
 
-# Titre de la sous-section
+# Mise en contexte
 
-Sous-titre de la sous-section
+## Historique
+
+- Décrire le contexte du projet/initiative/ajustement au produit qui nécessite de présenter une nouvelle architecture.
+- Il faut également identifier l'objectif de la présentation (par opposition à l'objectif de l'architecture ou de l'initiative).  C'est-à-dire (Approbation, avis, orientations, autres) 
+- On peut ajouter quelques éléments d'intérêts:
+  - Les jalons importants à atteindre (peuvent également se retrouver dans les contraintes)
+  - L'envergure de l'investissement global
+  - Le promoteur ou les parties prenantes notables
 
 ---
 layout: two-cols
 ---
 
-### Colonne de gauche avec des points clés :
+### Motivations
 
-- Composant A
-- Composant B
-- Composant C
+- Motivation 1 - Décrire l’ensemble des motivations sous forme de petits descriptifs.  Qu’est-ce qui motive la réalisation de cette initiative.   Ce sont des motivations d’affaires, désuétudes, bogues, performance, préparation au futur, etc.
+- Motivation 2 - Il peut y avoir plusieurs motivations….
+
 
 ::header::
-# Architecture en deux volets
-## Test
+# Mise en contexte
+## Motivations et objectifs
 
 ::right::
 
-### Volet droit
+### Objectifs
 
-Colonne de droite avec du contenu complémentaire.
+- Objectif 1 - Lister l’ensemble des objectifs qui seront atteints avec la solution proposée dans ce document
+- Objectif 2 - L’ensemble des objectifs….
+- Faire ressortir les éléments stratégiques dignes de mention.
 
-- Intégration X
-- Service Y
-- Interface Z
+---
+layout: section
+sectionNo: 02
+---
+
+# Contraintes
+
+---
+layout: section
+sectionNo: 03
+---
+
+# Exigences
+
+---
+layout: section
+sectionNo: 04
+---
+
+# Architecure cible
+
+---
+layout: subsection
+subSectionNo: 4.1
+---
+
+# Architecture cible
+
+## Résultat de la vigie
 
 ---
 layout: statement

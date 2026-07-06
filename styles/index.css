@@ -16,6 +16,8 @@
   --artm-green:      #71BD50;  /* green      – hyperlinks       */
   --artm-body:       #000000;
   --artm-bg:         #FFFFFF;
+  --artm-darkGrey:   #333333;
+  --artm-white:      rgba(255,255,255,1);
 
   /* Slidev theme aliases */
   --slidev-theme-primary:    var(--artm-primary);
@@ -248,10 +250,30 @@
   align-items: center;
   justify-content: space-between;
   padding: 0 27px;
-  border-top: 1.5px solid var(--artm-teal);
   font-size: 0.55em;
   font-weight: 700;
   color: var(--artm-body);
+}
+
+.artm-footer__brand,
+.artm-footer__brand > img,
+.artm-footer__title {
+  display: inline-block;
+}
+
+.artm-footer__brand > img {
+  height: 9.4px;
+}
+
+.artm-footer__title {
+  vertical-align: text-top;
+}
+
+.artm-footer__brand::after {
+  content: '⟩';
+  display: inline-block;
+  margin: 0 0.5em;
+  color: #6a6c70;
 }
 
 /* ── Inline code ── */

@@ -80,11 +80,80 @@ sectionNo: 02
 # Contraintes
 
 ---
+layout: two-cols
+---
+
+### Contraintes
+
+- Contrainte 1 - Lister l’ensemble des contraintes qui ont dû avoir été prises en compte pour élaborer cette solution.  Il ne s'agit pas de risques projets, mais bien des contraintes qui doivent absolument tenu en compte
+- Contrainte 2 - Les contraintes sont diverses: 
+  - Des contraintes de temps (livraison avant telle date – fin de contrat, changement de loi)
+  - Des contraintes de compatibilité à l’existant
+  - Des contraintes d’affaires (manque de fonds, politique, alignement stratégique, etc.)
+  - Une contrainte temporaire (architecture partielle pour un plan de transition)
+  - Des contraintes légales
+
+::header::
+# Contraintes
+## Contraintes d’affaires et technologiques actuelle (hypothèses)
+
+::right::
+
+- Contrainte n
+- …
+- Contrainte n+1
+- …
+
+---
 layout: section
 sectionNo: 03
 ---
 
 # Exigences
+
+---
+layout: two-cols
+---
+
+### Exigences
+
+- Exigence 1
+  - Lister l’ensemble des exigences technologiques (technologies, performance requises, stockage, bande passante, puissance de calculs, etc.), langages, nombre d’environnements, accès aux systèmes externes, plateformes d’intégration, plateforme de déploiement (containers…), console de gestion, etc.
+- Exigence 2
+  - N’oubliez pas les exigences opérationnelles pour le soutien, la surveillance et le service à la clientèle
+
+::header::
+# Exigences obligatoires
+## Exigences technologiques et fonctionnels
+
+::right::
+
+- Exigence n
+- …
+- Exigence n+1
+- ...
+---
+layout: two-cols
+---
+
+- Requis 1
+  - Lister les requis qualité globale pertinents incluant la sécurité pour aider le lecteur à comprendre la solution et les raisons des choix qui ont été faits tout en couvrant les différentes facettes d’architecture.
+- Requis 2
+  - Soyez ambitieux et documentez vos SLOs en fonction de la structure des services/parcours utilisateurs que l’architecture introduit ou modifie.
+- Requis 3
+  - Il faut faire des choix éditoriaux, il ne s’agit pas de reproduire l’analyse d’affaires exhaustives qui a pu être faite. 
+  - Référer les documents des analystes d'affaires, s'il y a lieu
+
+::header::
+# Exigences obligatoires
+## Exigences de qualité globale et de sécurité
+
+::right::
+
+- Requis n
+- …
+- Requis n+1
+- …
 
 ---
 layout: section
@@ -182,6 +251,106 @@ layout: default
 ## Description de la solution et de son contexte
 
 ---
+layout: default
+---
+
+# Architecture cible
+
+## Architecture cible Vue contextuelle
+
+```mermaid
+flowchart LR
+    Context["🏢<br/><b>Contexte</b><br/><br/>Vue d'affaires globale<br/>du système"]
+    Containers["📦<br/><b>Conteneurs</b><br/><br/>Applications,<br/>services et bases de données"]
+    Components["⚙️<br/><b>Composants</b><br/><br/>Modules internes<br/>d'un conteneur"]
+    Code["💻<br/><b>Code</b><br/><br/>Classes, interfaces<br/>et implémentation"]
+
+    Context -->|"Zoom in"| Containers
+    Containers -->|"Zoom in"| Components
+    Components -->|"Zoom in"| Code
+
+    style Context fill:#4CAF50,color:#ffffff,stroke:#388E3C,stroke-width:2px
+    style Containers fill:#2196F3,color:#ffffff,stroke:#1565C0,stroke-width:2px
+    style Components fill:#FFC107,color:#000000,stroke:#FF8F00,stroke-width:2px
+    style Code fill:#F44336,color:#ffffff,stroke:#C62828,stroke-width:2px
+```
+
+---
+layout: default
+---
+
+# Architecture cible
+
+## Architecture cible (Vue applicative ou fonctionnelle)
+
+```mermaid
+flowchart LR
+    Context["🏢<br/><b>Contexte</b><br/><br/>Vue d'affaires globale<br/>du système"]
+    Containers["📦<br/><b>Conteneurs</b><br/><br/>Applications,<br/>services et bases de données"]
+    Components["⚙️<br/><b>Composants</b><br/><br/>Modules internes<br/>d'un conteneur"]
+    Code["💻<br/><b>Code</b><br/><br/>Classes, interfaces<br/>et implémentation"]
+
+    Context -->|"Zoom in"| Containers
+    Containers -->|"Zoom in"| Components
+    Components -->|"Zoom in"| Code
+
+    style Context fill:#4CAF50,color:#ffffff,stroke:#388E3C,stroke-width:2px
+    style Containers fill:#2196F3,color:#ffffff,stroke:#1565C0,stroke-width:2px
+    style Components fill:#FFC107,color:#000000,stroke:#FF8F00,stroke-width:2px
+    style Code fill:#F44336,color:#ffffff,stroke:#C62828,stroke-width:2px
+```
+
+---
+layout: default
+---
+
+# Architecture cible
+
+## Architecture cible (Vue donnée, indicateurs et tableaux de bord)
+
+```mermaid
+flowchart LR
+    Context["🏢<br/><b>Contexte</b><br/><br/>Vue d'affaires globale<br/>du système"]
+    Containers["📦<br/><b>Conteneurs</b><br/><br/>Applications,<br/>services et bases de données"]
+    Components["⚙️<br/><b>Composants</b><br/><br/>Modules internes<br/>d'un conteneur"]
+    Code["💻<br/><b>Code</b><br/><br/>Classes, interfaces<br/>et implémentation"]
+
+    Context -->|"Zoom in"| Containers
+    Containers -->|"Zoom in"| Components
+    Components -->|"Zoom in"| Code
+
+    style Context fill:#4CAF50,color:#ffffff,stroke:#388E3C,stroke-width:2px
+    style Containers fill:#2196F3,color:#ffffff,stroke:#1565C0,stroke-width:2px
+    style Components fill:#FFC107,color:#000000,stroke:#FF8F00,stroke-width:2px
+    style Code fill:#F44336,color:#ffffff,stroke:#C62828,stroke-width:2px
+```
+
+---
+layout: default
+---
+
+# Architecture cible
+
+## Architecture cible (Vue opérationnelle) Surveillance, gestion des incidents, collaboration inter-équipes
+
+```mermaid
+flowchart LR
+    Context["🏢<br/><b>Contexte</b><br/><br/>Vue d'affaires globale<br/>du système"]
+    Containers["📦<br/><b>Conteneurs</b><br/><br/>Applications,<br/>services et bases de données"]
+    Components["⚙️<br/><b>Composants</b><br/><br/>Modules internes<br/>d'un conteneur"]
+    Code["💻<br/><b>Code</b><br/><br/>Classes, interfaces<br/>et implémentation"]
+
+    Context -->|"Zoom in"| Containers
+    Containers -->|"Zoom in"| Components
+    Components -->|"Zoom in"| Code
+
+    style Context fill:#4CAF50,color:#ffffff,stroke:#388E3C,stroke-width:2px
+    style Containers fill:#2196F3,color:#ffffff,stroke:#1565C0,stroke-width:2px
+    style Components fill:#FFC107,color:#000000,stroke:#FF8F00,stroke-width:2px
+    style Code fill:#F44336,color:#ffffff,stroke:#C62828,stroke-width:2px
+```
+
+---
 layout: two-cols
 ---
 
@@ -262,6 +431,25 @@ layout: default
 |Utilisation du cluster AKS|||
 |Coûts plateforme|||
 |<p style="text-align:right;">**Total**</p>|**$0.00**|**$0.00**|
+
+---
+layout: two-cols
+---
+
+- Estimé
+  - Proposer un estimé en effort, et proposer un échéancier réaliste mais dans un scénario positif – l’architecture n’est pas de la gestion de projets, on ne doit tenir compte que des contraintes présentées dans ce document
+
+::header::
+# Stratégie de réalisation
+## Stratégie de sourçage, estimés des efforts, plan de déploiement ou migration 
+
+::right::
+
+- Plan de déploiement
+  - Les étapes qui suivent après le sourçage
+  - Installation d’équipements, déploiement des solutions, décommissionnement des solutions en place le cas échéant
+  - Le plan de transition et les phases (les jalons importants) dans le cas d’un déploiement MVP/agile
+
 
 ---
 layout: section

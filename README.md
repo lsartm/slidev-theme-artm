@@ -55,14 +55,18 @@ Les fichiers réutilisables sont dans ce repo:
 
 - `templates/SKILL.md`
 - `templates/project-context.md`
+- `.github/instructions/slidev-presentation.instructions.md`
+- `.github/prompts/generate-artm-slides.prompt.md`
 
 Pour un repo qui réutilise ce thème:
 
-1. Copier `templates/SKILL.md` vers `.github/skills/SKILL.md` dans le repo cible.
+1. Copier `templates/SKILL.md` vers `.github/skills/project-slides/SKILL.md` dans le repo cible.
 2. Copier `templates/project-context.md` dans `templates/` du repo cible.
-3. Utiliser `templates/project-context.md` pour collecter le contexte.
-4. Utiliser un des prompts ci-dessous dans Copilot Chat.
-5. Générer puis adapter `slides.md` directement a partir du contexte projet.
+3. Copier `.github/instructions/slidev-presentation.instructions.md` vers `.github/instructions/` dans le repo cible.
+4. Copier `.github/prompts/generate-artm-slides.prompt.md` vers `.github/prompts/` dans le repo cible.
+5. Utiliser `templates/project-context.md` pour collecter le contexte.
+6. Utiliser `/generate-artm-slides` dans Copilot Chat, ou un des prompts ci-dessous.
+7. Générer puis adapter `slides.md` directement a partir du contexte projet.
 
 Structure recommandee dans le repo cible:
 
@@ -70,10 +74,32 @@ Structure recommandee dans le repo cible:
 <repo-cible>/
 	.github/
 		skills/
-			SKILL.md
+			project-slides/
+				SKILL.md
+		instructions/
+			slidev-presentation.instructions.md
+		prompts/
+			generate-artm-slides.prompt.md
 	templates/
 		project-context.md
 ```
+
+### Utiliser le skill et l'instruction
+
+Le skill `project-slides` décrit les règles générales de génération des présentations ARTM. L'instruction `slidev-presentation.instructions.md` s'applique automatiquement lorsque Copilot crée ou modifie `slides.md`.
+
+Pour générer une présentation :
+
+1. Fournir dans le prompt le contexte du projet et les éléments d'architecture disponibles.
+2. Demander à Copilot de lire `slides.md`, `project-context.md` et la documentation pertinente.
+3. Demander la génération ou la mise à jour de `slides.md` en respectant le skill et l'instruction.
+4. Vérifier le compte rendu final : fichier produit, contenu couvert, hypothèses, éléments manquants et contrôles effectués.
+
+L'instruction impose notamment la conservation et la complétion de la première diapositive, la conservation de la deuxième diapositive et la conservation des deux dernières diapositives.
+
+Le prompt `/generate-artm-slides` demande les informations variables suivantes : sujet, audience, contexte projet, éléments d'architecture, source documentaire brute et contenu à ajouter ou modifier. Il génère ou met à jour `slides.md` et produit le compte rendu standardisé défini dans l'instruction. La source brute peut être un compte rendu d'atelier, des notes ou un contenu Markdown collé directement dans le prompt.
+
+Les présentations générées doivent être autoportantes : la lecture des diapositives dans l'ordre doit suffire à comprendre le contexte, les contraintes, les besoins, les enjeux, les décisions et les solutions, sans narrateur, speaker, notes orales ou consultation de la documentation source. Les diagrammes, tableaux, chiffres, acronymes et termes spécialisés doivent être suffisamment contextualisés.
 
 ### Exemple de prompt (générique)
 
@@ -88,6 +114,8 @@ Lis :
 
 Respecte toutes les règles définies dans SKILL.md.
 
+Respecte également `.github/instructions/slidev-presentation.instructions.md`.
+
 Utilise slides.md comme blueprint officiel.
 
 Génère toutes les diapositives applicables.
@@ -99,9 +127,7 @@ Ajoute des diagrammes Mermaid lorsque pertinent.
 Produis :
 
 1. slides.md complet
-2. Plan des diapositives
-3. Hypothèses
-4. Éléments manquants
+2. Compte rendu avec les rubriques `Fichier produit`, `Contenu couvert`, `Hypothèses`, `Éléments manquants` et `Contrôles effectués`
 ```
 
 ### Exemple de prompt (ARTM architecture)
@@ -114,6 +140,7 @@ Avant de commencer :
 1. Lire slides.md et l'utiliser comme blueprint officiel.
 2. Lire project-context.md.
 3. Analyser tout le contenu du dépôt.
+4. Respecter le skill `project-slides` et l'instruction `.github/instructions/slidev-presentation.instructions.md`.
 
 Analyser notamment :
 
@@ -134,15 +161,13 @@ Exigences :
 - Ne pas produire un squelette de présentation.
 - Ne pas inventer de faits.
 
-La présentation finale doit être prête à être présentée et compréhensible sans devoir consulter la documentation source.
+La présentation finale doit être prête à être présentée et compréhensible sans narrateur, speaker ou consultation de la documentation source.
 
 Produire :
 
 1. slides.md complet
-2. Plan des diapositives
-3. Hypothèses
-4. Éléments manquants
-5. Diagrammes suggérés mais impossibles à générer faute d'information
+2. Compte rendu avec les rubriques `Fichier produit`, `Contenu couvert`, `Hypothèses`, `Éléments manquants` et `Contrôles effectués`
+3. Diagrammes suggérés mais impossibles à générer faute d'information
 ```
 
 ## Mises en page disponibles

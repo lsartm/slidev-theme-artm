@@ -40,15 +40,19 @@ When updating project-generation templates:
 1. Update files in `templates/`:
    - `SKILL.md`
    - `project-context.md`
-2. Update prompt examples in `README.md`.
+2. Update `.github/instructions/slidev-presentation.instructions.md` when generation or output-format rules change.
+3. Update `.github/prompts/generate-artm-slides.prompt.md` when the reusable generation workflow changes.
+4. Update prompt examples and reuse instructions in `README.md`.
 
 ## Target Repository Setup (for consumers)
 
 For repositories reusing this template package:
 
-1. Copy `templates/SKILL.md` to `.github/skills/SKILL.md`.
+1. Copy `templates/SKILL.md` to `.github/skills/project-slides/SKILL.md`.
 2. Copy `templates/project-context.md` into the target repo `templates/` folder.
-3. Use Copilot Chat with prompt examples from `README.md`.
+3. Copy `.github/instructions/slidev-presentation.instructions.md` into `.github/instructions/`.
+4. Copy `.github/prompts/generate-artm-slides.prompt.md` into `.github/prompts/`.
+5. Use `/generate-artm-slides` or the prompt examples from `README.md` in Copilot Chat.
 
 ## Pull Request Checklist
 

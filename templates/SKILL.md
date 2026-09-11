@@ -175,6 +175,18 @@ La présentation finale doit être considérée comme une première version comp
 
 ---
 
+# Slide Preservation Requirements
+
+Les diapositives suivantes sont obligatoires et ne doivent jamais être supprimées :
+
+- la première diapositive doit être conservée et complétée ;
+- la deuxième diapositive doit être conservée ;
+- les deux dernières diapositives doivent être conservées et complétées.
+
+Lorsqu'une de ces diapositives contient des espaces réservés, les remplacer par le contenu disponible ou documenter les éléments manquants. Ne jamais supprimer ces diapositives pour simplifier ou réorganiser la présentation.
+
+---
+
 # Facts And Assumptions
 
 Ne jamais inventer :
@@ -231,6 +243,22 @@ Privilégier :
 - Longs paragraphes
 - Répétition
 - Texte inutile
+
+---
+
+# Self-Contained Presentation Requirement
+
+La présentation doit être autoportante : une personne doit pouvoir comprendre le contexte, les contraintes, les besoins, les enjeux, les options, la solution ou les solutions retenues et les prochaines étapes en lisant uniquement les diapositives.
+
+Pour chaque diapositive :
+
+- fournir les informations nécessaires à sa compréhension sans dépendre d'un narrateur, d'un speaker ou de notes orales ;
+- développer les acronymes et les termes spécialisés lors de leur première utilisation ;
+- expliciter les relations entre le contexte, les besoins, les contraintes, les enjeux, les décisions et la solution ;
+- donner suffisamment de contexte aux diagrammes, tableaux et chiffres pour qu'ils soient interprétables seuls ;
+- utiliser des titres formulés comme des messages lorsque cela améliore la compréhension.
+
+Avant de terminer, vérifier que le fil narratif reste compréhensible si les diapositives sont lues dans l'ordre, sans présentation orale ni consultation de la documentation source.
 
 ---
 

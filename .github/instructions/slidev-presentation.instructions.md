@@ -35,14 +35,24 @@ Ne jamais inventer de faits, de dates, de coûts, de décisions, de risques ou d
 - La présentation doit être autoportante et compréhensible sans narrateur, speaker, notes orales ou consultation de la documentation source.
 - Donner le contexte nécessaire aux diagrammes, tableaux, chiffres, acronymes et termes spécialisés.
 - Relier explicitement le contexte, les contraintes, les besoins, les enjeux, les décisions et la ou les solutions.
+- Les layouts `section` et `subsection` doivent contenir uniquement leur frontmatter et leurs titres ; placer tout contenu détaillé dans les slides suivantes.
 - Ne pas générer une présentation vide, un simple squelette ou des diapositives constituées uniquement de placeholders lorsque l'information est disponible.
+
+## Modèle et nombre de slides
+
+- Le nombre de slides peut évoluer selon la quantité et la complexité du contenu.
+- Remplir d'abord les slides du modèle `slides.md`, qui constituent la base commune et les attentes connues des architectes.
+- Ajouter des slides lorsque nécessaire pour faire tenir tout le contenu de manière lisible et autoportante.
+- Ne supprimer une slide du modèle que si le contexte ne permet réellement pas de la renseigner ou si elle est manifestement hors périmètre.
+- Justifier toute suppression exceptionnelle dans le compte rendu final.
+- Ne jamais supprimer une slide uniquement pour raccourcir la présentation ou réduire le nombre de slides.
 
 ## Slides obligatoires
 
 Les diapositives suivantes doivent toujours être conservées :
 
 - la première diapositive doit être complétée et ne doit jamais être supprimée ;
-- la deuxième diapositive ne doit jamais être supprimée ;
+- la deuxième diapositive ne doit jamais être supprimée ni altérée, y compris son frontmatter, son layout, son titre et son contenu ;
 - les deux dernières diapositives ne doivent jamais être supprimées et doivent être complétées lorsque le contexte le permet.
 
 Ne pas supprimer ces diapositives pour réorganiser, raccourcir ou simplifier la présentation. Si leur contenu est incomplet, conserver la structure et documenter les éléments manquants.

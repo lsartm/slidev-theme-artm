@@ -95,11 +95,13 @@ Pour générer une présentation :
 3. Demander la génération ou la mise à jour de `slides.md` en respectant le skill et l'instruction.
 4. Vérifier le compte rendu final : fichier produit, contenu couvert, hypothèses, éléments manquants et contrôles effectués.
 
-L'instruction impose notamment la conservation et la complétion de la première diapositive, la conservation de la deuxième diapositive et la conservation des deux dernières diapositives.
+L'instruction impose notamment la conservation et la complétion de la première diapositive, la conservation strictement à l'identique de la deuxième diapositive et la conservation des deux dernières diapositives.
 
 Le prompt `/generate-artm-slides` demande les informations variables suivantes : sujet, audience, contexte projet, éléments d'architecture, source documentaire brute et contenu à ajouter ou modifier. Il génère ou met à jour `slides.md` et produit le compte rendu standardisé défini dans l'instruction. La source brute peut être un compte rendu d'atelier, des notes ou un contenu Markdown collé directement dans le prompt.
 
 Les présentations générées doivent être autoportantes : la lecture des diapositives dans l'ordre doit suffire à comprendre le contexte, les contraintes, les besoins, les enjeux, les décisions et les solutions, sans narrateur, speaker, notes orales ou consultation de la documentation source. Les diagrammes, tableaux, chiffres, acronymes et termes spécialisés doivent être suffisamment contextualisés.
+
+Le nombre de slides peut évoluer. Les slides du modèle `slides.md` doivent d'abord être complétées, car elles représentent la base commune et les attentes connues des architectes. Des slides peuvent ensuite être ajoutées si nécessaire pour faire tenir tout le contenu de manière lisible et autoportante. Une slide ne peut être supprimée que si le contexte ne permet réellement pas de la renseigner ou si elle est manifestement hors périmètre ; toute suppression exceptionnelle doit être justifiée.
 
 ### Exemple de prompt (générique)
 
@@ -205,9 +207,9 @@ sectionNo: "01"
 ---
 
 # Titre de la section
-
-Sous-titre optionnel
 ```
+
+Les layouts `section` et `subsection` sont des séparateurs visuels : ils doivent contenir uniquement leur frontmatter et leurs titres. Placer les paragraphes, listes, tableaux et diagrammes dans les diapositives de contenu suivantes.
 
 ### `two-cols` — titre au-dessus des deux colonnes
 

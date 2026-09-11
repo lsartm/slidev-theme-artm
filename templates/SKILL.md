@@ -175,12 +175,27 @@ La présentation finale doit être considérée comme une première version comp
 
 ---
 
+# Template And Slide Count Requirements
+
+Le nombre de diapositives peut évoluer selon la quantité et la complexité du contenu à présenter.
+
+- utiliser en priorité toutes les diapositives du modèle `slides.md` comme base de présentation ;
+- considérer ces diapositives comme la structure commune et les attentes connues des architectes ;
+- compléter d'abord les diapositives du modèle avant d'en ajouter de nouvelles ;
+- ajouter des diapositives lorsque cela est nécessaire pour présenter tout le contenu de façon lisible et autoportante ;
+- ne supprimer aucune diapositive du modèle sauf si le contexte du sujet ne permet réellement pas de la renseigner ou si elle est manifestement hors périmètre ;
+- justifier toute suppression exceptionnelle dans les hypothèses ou les éléments manquants du compte rendu final.
+
+Ne jamais supprimer une diapositive uniquement pour raccourcir la présentation, réduire le nombre de pages ou éviter de traiter son contenu.
+
+---
+
 # Slide Preservation Requirements
 
 Les diapositives suivantes sont obligatoires et ne doivent jamais être supprimées :
 
 - la première diapositive doit être conservée et complétée ;
-- la deuxième diapositive doit être conservée ;
+- la deuxième diapositive doit être conservée strictement à l'identique, y compris son frontmatter, son layout, son titre et son contenu ;
 - les deux dernières diapositives doivent être conservées et complétées.
 
 Lorsqu'une de ces diapositives contient des espaces réservés, les remplacer par le contenu disponible ou documenter les éléments manquants. Ne jamais supprimer ces diapositives pour simplifier ou réorganiser la présentation.
@@ -257,6 +272,7 @@ Pour chaque diapositive :
 - expliciter les relations entre le contexte, les besoins, les contraintes, les enjeux, les décisions et la solution ;
 - donner suffisamment de contexte aux diagrammes, tableaux et chiffres pour qu'ils soient interprétables seuls ;
 - utiliser des titres formulés comme des messages lorsque cela améliore la compréhension.
+- les layouts `section` et `subsection` ne doivent contenir que leur frontmatter et leurs titres ; ne pas y ajouter de paragraphes, listes, tableaux, diagrammes ou autres contenus détaillés.
 
 Avant de terminer, vérifier que le fil narratif reste compréhensible si les diapositives sont lues dans l'ordre, sans présentation orale ni consultation de la documentation source.
 

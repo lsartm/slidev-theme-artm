@@ -16,7 +16,12 @@ const withBase = (path: string) => {
 
 <template>
   <div class="slidev-layout statement">
-    <img class="statement-arrow" :src="iconSrc ?? withBase('artm-arrow.png')" alt="" aria-hidden="true" />
+    <img
+      class="statement-arrow"
+      :src="iconSrc ?? withBase('artm-arrow.png')"
+      alt=""
+      aria-hidden="true"
+    />
     <div class="statement-content">
       <slot />
     </div>
@@ -25,13 +30,12 @@ const withBase = (path: string) => {
 
 <style scoped>
 .statement {
-  background-color: #003C60;
+  background-color: var(--artm-primary);
   display: inline-table;
   align-items: baseline;
   justify-content: normal;
   width: 100%;
   height: 100%;
-  font-family: Arial, 'Helvetica Neue', sans-serif;
   padding: 2em;
 }
 
@@ -52,7 +56,7 @@ const withBase = (path: string) => {
 .statement-content :deep(h2) {
   font-size: 2em;
   font-weight: 700;
-  color: #ffffff;
+  color: rgb(var(--artm-white) / 100%);
   line-height: 1.25;
   margin: 0 0 0.4em;
   text-align: left;
@@ -69,7 +73,7 @@ const withBase = (path: string) => {
 .statement-content :deep(ul),
 .statement-content :deep(ol) {
   font-size: 1em;
-  color: rgba(255, 255, 255, 0.85);
+  color: rgba(var(--artm-white, 255, 255, 255), 0.85);
   line-height: 1.6;
   padding-left: 1.4em;
   text-align: left;
@@ -78,6 +82,6 @@ const withBase = (path: string) => {
 }
 
 .statement-content :deep(li::marker) {
-  color: var(--artm-teal, #00B1AC);
+  color: var(--artm-teal, #00b1ac);
 }
 </style>

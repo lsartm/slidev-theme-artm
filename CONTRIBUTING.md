@@ -9,6 +9,16 @@ This repository has two contribution tracks:
 1. Theme development and improvements for ARTM Slidev theme.
 2. Reusable template assets to help other projects generate Slidev decks quickly.
 
+## Branching Model (GitHub Flow)
+
+This project follows the **GitHub Flow** branching strategy:
+
+- The `main` branch is the production branch and is always deployable.
+- Any new feature, fix, or update is created on a dedicated feature branch branched from `main` (e.g., `feat/...`, `fix/...`, `chore/...`).
+- Open a Pull Request targeting `main`.
+- Automated CI checks ([.github/workflows/check.yml](.github/workflows/check.yml)) must pass on the PR.
+- Once reviewed and merged into `main`, GitHub Pages is automatically deployed ([.github/workflows/deploy.yml](.github/workflows/deploy.yml)).
+
 ## Local Workflow (Docker-first)
 
 Use Docker commands (no local Node.js required):
@@ -40,19 +50,24 @@ When updating project-generation templates:
 1. Update files in `templates/`:
    - `SKILL.md`
    - `project-context.md`
-2. Update prompt examples in `README.md`.
+2. Update `.github/instructions/slidev-presentation.instructions.md` when generation or output-format rules change.
+3. Update `.github/prompts/generate-artm-slides.prompt.md` when the reusable generation workflow changes.
+4. Update prompt examples and reuse instructions in `README.md`.
 
 ## Target Repository Setup (for consumers)
 
 For repositories reusing this template package:
 
-1. Copy `templates/SKILL.md` to `.github/skills/SKILL.md`.
+1. Copy `templates/SKILL.md` to `.github/skills/project-slides/SKILL.md`.
 2. Copy `templates/project-context.md` into the target repo `templates/` folder.
-3. Use Copilot Chat with prompt examples from `README.md`.
+3. Copy `.github/instructions/slidev-presentation.instructions.md` into `.github/instructions/`.
+4. Copy `.github/prompts/generate-artm-slides.prompt.md` into `.github/prompts/`.
+5. Use `/generate-artm-slides` or the prompt examples from `README.md` in Copilot Chat.
 
 ## Pull Request Checklist
 
 1. Changes are limited to the intended scope.
-2. README instructions remain accurate.
-3. New/updated template files are consistent with each other.
-4. No secrets or sensitive data are committed.
+2. Local check passes: `docker compose run --rm slidev npm run check` (validates `package.json`, layouts, styles, components, and `slides.md` quality rules).
+3. README instructions remain accurate.
+4. New/updated template files are consistent with each other.
+5. No secrets or sensitive data are committed.

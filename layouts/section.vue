@@ -14,7 +14,12 @@ const withBase = (path: string) => {
 <template>
   <div class="slidev-layout section">
     <!-- Teal wave background top-left -->
-    <img class="section-bg" :src="bgSrc ?? withBase('artm-bg-section.png')" alt="" aria-hidden="true" />
+    <img
+      class="section-bg"
+      :src="bgSrc ?? withBase('artm-bg-section.png')"
+      alt=""
+      aria-hidden="true"
+    />
 
     <!-- Large white circle left -->
     <div class="section-circle" />
@@ -22,7 +27,12 @@ const withBase = (path: string) => {
     <!-- Right content -->
     <div class="section-right">
       <div class="section-no-row">
-        <img class="section-arrow" :src="iconSrc ?? withBase('artm-arrow.png')" alt="" aria-hidden="true" />
+        <img
+          class="section-arrow"
+          :src="iconSrc ?? withBase('artm-arrow.png')"
+          alt=""
+          aria-hidden="true"
+        />
         <span v-if="sectionNo" class="section-num">{{ sectionNo }}</span>
       </div>
       <div class="section-text">
@@ -38,10 +48,9 @@ const withBase = (path: string) => {
   overflow: hidden;
   width: 100%;
   height: 100%;
-  background-color: #003C60;
+  background-color: var(--artm-primary, #003c60);
   display: flex;
   align-items: center;
-  font-family: Arial, 'Helvetica Neue', sans-serif;
 }
 
 .section-bg {
@@ -64,7 +73,7 @@ const withBase = (path: string) => {
   width: 43%;
   aspect-ratio: 1;
   border-radius: 50%;
-  background-color: #EFF4F6;
+  background-color: var(--artm-bg-light, #eff4f6);
   flex-shrink: 0;
 }
 
@@ -95,7 +104,7 @@ const withBase = (path: string) => {
 .section-num {
   font-size: 8em;
   font-weight: 700;
-  color: #ffffff;
+  color: rgb(var(--artm-white) / 100%);
   line-height: 1;
 }
 
@@ -112,7 +121,7 @@ const withBase = (path: string) => {
 .section-text :deep(h1) {
   font-size: 2em;
   font-weight: 700;
-  color: #ffffff;
+  color: rgb(var(--artm-white) / 100%);
   line-height: 1.2;
   margin: 0;
 }
@@ -121,7 +130,7 @@ const withBase = (path: string) => {
 .section-text :deep(p) {
   font-size: 1em;
   font-weight: 700;
-  color: rgba(255, 255, 255, 0.85);
+  color: rgb(var(--artm-white) / 85%);
   margin: 2em 0 0;
 }
 </style>

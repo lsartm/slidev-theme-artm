@@ -14,7 +14,12 @@ const withBase = (path: string) => {
 <template>
   <div class="slidev-layout section">
     <!-- Teal wave background top-left -->
-    <img class="section-bg" :src="bgSrc ?? withBase('artm-bg-subsection.png')" alt="" aria-hidden="true" />
+    <img
+      class="section-bg"
+      :src="bgSrc ?? withBase('artm-bg-subsection.png')"
+      alt=""
+      aria-hidden="true"
+    />
 
     <!-- Large white circle right -->
     <div class="section-circle" />
@@ -22,8 +27,15 @@ const withBase = (path: string) => {
     <!-- Left content -->
     <div class="section-left">
       <div class="section-no-row">
-        <img class="section-arrow" :src="iconSrc ?? withBase('artm-icon.png')" alt="" aria-hidden="true" />
-        <span v-if="subSectionNo" class="subsection-num">{{ subSectionNo }}</span>
+        <img
+          class="section-arrow"
+          :src="iconSrc ?? withBase('artm-icon.png')"
+          alt=""
+          aria-hidden="true"
+        />
+        <span v-if="subSectionNo" class="subsection-num">{{
+          subSectionNo
+        }}</span>
       </div>
       <div class="section-text">
         <slot />
@@ -38,10 +50,9 @@ const withBase = (path: string) => {
   overflow: hidden;
   width: 100%;
   height: 100%;
-  background-color: #003C60;
+  background-color: var(--artm-primary, #003c60);
   display: flex;
   align-items: center;
-  font-family: Arial, 'Helvetica Neue', sans-serif;
 }
 
 .section-bg {
@@ -64,7 +75,7 @@ const withBase = (path: string) => {
   width: 29%;
   aspect-ratio: 1;
   border-radius: 50%;
-  background-color: #003C60;
+  background-color: var(--artm-primary, #003c60);
   flex-shrink: 0;
 }
 
@@ -95,7 +106,7 @@ const withBase = (path: string) => {
 .subsection-num {
   font-size: 8em;
   font-weight: 700;
-  color: #003C60;
+  color: var(--artm-primary, #003c60);
   line-height: 1;
 }
 
@@ -106,7 +117,7 @@ const withBase = (path: string) => {
 .section-text :deep(h1) {
   font-size: 2em;
   font-weight: 700;
-  color: #003C60;
+  color: var(--artm-primary, #003c60);
   line-height: 1.2;
   margin: 0;
   text-align: left;
@@ -116,7 +127,7 @@ const withBase = (path: string) => {
 .section-text :deep(p) {
   font-size: 1em;
   font-weight: 700;
-  color: #003C60;
+  color: var(--artm-primary, #003c60);
   margin: 2em 0 0;
   text-align: left;
 }

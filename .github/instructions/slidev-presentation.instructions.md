@@ -1,7 +1,7 @@
 ---
-name: "ARTM Slidev Presentation"
-description: "Use when validating a presentation prompt, architecture context, or generating and reviewing slides.md with the ARTM Slidev theme."
-applyTo: "slides.md"
+name: 'ARTM Slidev Presentation'
+description: 'Use when validating a presentation prompt, architecture context, or generating and reviewing slides.md with the ARTM Slidev theme.'
+applyTo: 'slides.md'
 ---
 
 # ARTM Slidev Presentation Instructions

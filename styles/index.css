@@ -6,23 +6,23 @@
 
 /* ── Design tokens ── */
 :root {
-  --artm-primary:    #003C60;  /* dark navy – titles, accent1   */
-  --artm-teal:       #00B1AC;  /* teal       – accent5 / dk2    */
-  --artm-blue:       #0089DC;  /* sky blue   – accent3          */
-  --artm-teal-dark:  #347272;  /* dark teal  – accent4          */
-  --artm-coral:      #FF7171;  /* coral      – accent2          */
-  --artm-navy-dark:  #2A3449;  /* navy slate – accent6          */
-  --artm-bg-light:   #EFF4F6;  /* light blue-grey – lt2         */
-  --artm-green:      #71BD50;  /* green      – hyperlinks       */
-  --artm-body:       #000000;
-  --artm-bg:         #FFFFFF;
-  --artm-darkGrey:   #333333;
-  --artm-white:      255 255 255;
+  --artm-primary: #003c60; /* dark navy – titles, accent1   */
+  --artm-teal: #00b1ac; /* teal       – accent5 / dk2    */
+  --artm-blue: #0089dc; /* sky blue   – accent3          */
+  --artm-teal-dark: #347272; /* dark teal  – accent4          */
+  --artm-coral: #ff7171; /* coral      – accent2          */
+  --artm-navy-dark: #2a3449; /* navy slate – accent6          */
+  --artm-bg-light: #eff4f6; /* light blue-grey – lt2         */
+  --artm-green: #71bd50; /* green      – hyperlinks       */
+  --artm-body: #000000;
+  --artm-bg: #ffffff;
+  --artm-darkGrey: #333333;
+  --artm-white: 255 255 255;
 
   /* Slidev theme aliases */
-  --slidev-theme-primary:    var(--artm-primary);
-  --slidev-theme-secondary:  var(--artm-teal);
-  --slidev-theme-accent:     var(--artm-blue);
+  --slidev-theme-primary: var(--artm-primary);
+  --slidev-theme-secondary: var(--artm-teal);
+  --slidev-theme-accent: var(--artm-blue);
   --slidev-theme-background: var(--artm-bg);
 
   font-family: Arial, 'Helvetica Neue', sans-serif;

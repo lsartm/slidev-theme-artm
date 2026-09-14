@@ -9,7 +9,9 @@ defineProps<{
     <div class="slide-inner">
       <slot />
     </div>
-    <Footer :document-title="String($attrs.documentTitle || $slidev.configs.title)" />
+    <Footer
+      :document-title="String($attrs.documentTitle || $slidev.configs.title)"
+    />
   </div>
 </template>
 
@@ -20,7 +22,7 @@ defineProps<{
   padding: 0;
   height: 100%;
   width: 100%;
-  background-color: var(--artm-bg, #FFFFFF);
+  background-color: var(--artm-bg, #ffffff);
   position: relative;
 }
 
@@ -36,17 +38,17 @@ defineProps<{
 .slide-inner :deep(h1) {
   font-size: 1.5em;
   font-weight: 700;
-  color: var(--artm-primary, #003C60);
+  color: var(--artm-primary, #003c60);
   line-height: 1.2;
   margin: 0 0 0.25em;
   padding-bottom: 0.25em;
-  border-bottom: 2px solid var(--artm-teal, #00B1AC);
+  border-bottom: 2px solid var(--artm-teal, #00b1ac);
 }
 
 .slide-inner :deep(h2) {
   font-size: 1.05em;
   font-weight: 700;
-  color: var(--artm-primary, #003C60);
+  color: var(--artm-primary, #003c60);
   line-height: 1.3;
   margin: 0 0 0.35em;
   white-space: normal;
@@ -82,7 +84,7 @@ defineProps<{
 }
 
 .slide-inner :deep(li::marker) {
-  color: var(--artm-teal, #00B1AC);
+  color: var(--artm-teal, #00b1ac);
 }
 
 .slide-inner :deep(.mermaid),

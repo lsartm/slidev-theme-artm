@@ -183,21 +183,21 @@ Recommandation :
 ## Feuille de route
 
 | Jalon | Date | Notes |
-|---------|---------|---------|
+| ----- | ---- | ----- |
 
 ---
 
 ## Risques
 
 | Risque | Impact | Probabilité | Atténuation |
-|---------|---------|---------|---------|
+| ------ | ------ | ----------- | ----------- |
 
 ---
 
 ## Décisions requises
 
 | Décision | Responsable | Échéance |
-|-----------|-----------|-----------|
+| -------- | ----------- | -------- |
 
 ---
 

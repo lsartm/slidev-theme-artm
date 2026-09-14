@@ -108,31 +108,31 @@ Sauf indication contraire, générer toutes les diapositives applicables du blue
 
 Structure attendue :
 
-01. Couverture
+1.  Couverture
 
-02. Contexte et objectif
+2.  Contexte et objectif
 
 Section — Mise en contexte
 
-03. Historique
+3.  Historique
 
-04. Motivations et objectifs
+4.  Motivations et objectifs
 
 Section — Contraintes
 
-05. Contraintes d'affaires et technologiques
+5.  Contraintes d'affaires et technologiques
 
 Section — Exigences
 
-06. Exigences obligatoires
+6.  Exigences obligatoires
 
-07. Exigences non fonctionnelles
+7.  Exigences non fonctionnelles
 
 Section — Architecture cible
 
-08. Résultats de la vigie
+8.  Résultats de la vigie
 
-09. Requis fonctionnels
+9.  Requis fonctionnels
 
 10. Description de la solution
 
@@ -317,14 +317,19 @@ layout: two-cols
 ---
 
 ### Titre colonne gauche
+
 Contenu gauche
 
 ::header::
+
 # Titre de la diapositive
+
 ## Sous-titre concis
 
 ::right::
+
 ### Titre colonne droite
+
 Contenu droit
 ```
 

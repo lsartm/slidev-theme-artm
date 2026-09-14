@@ -11,16 +11,73 @@ const withBase = (path: string) => {
 
 <template>
   <div class="slidev-layout agenda">
-    <img class="cover-bg" :src="props.coverBg ?? withBase('artm-bg-content.jpg')" alt="" aria-hidden="true" />
+    <img
+      class="cover-bg"
+      :src="props.coverBg ?? withBase('artm-bg-content.jpg')"
+      alt=""
+      aria-hidden="true"
+    />
     <slot />
     <div class="artm-agenda-grid">
-      <article><div class="illustration"><img :src="withBase('artm-bus-corner.png')" alt="" aria-hidden="true" /></div><h2>Mise en contexte</h2><p>Architecture actuelle, motivations et objectifs</p></article>
-      <article><div class="illustration"><img :src="withBase('artm-bus-panel.png')" alt="" aria-hidden="true" /></div><h2>Contraintes</h2><p>Contraintes d’affaires et technologiques actuelles</p></article>
-      <article><div class="illustration"><img :src="withBase('artm-bus-checklist.png')" alt="" aria-hidden="true" /></div><h2>Exigences</h2><p>Exigences technologiques</p></article>
-      <article><div class="illustration"><img :src="withBase('artm-bus-destination.png')" alt="" aria-hidden="true" /></div><h2>Architecture cible</h2><p>Vigie, requis fonctionnels et diagrammes</p></article>
-      <article><div class="illustration"><img :src="withBase('artm-bus-engine.png')" alt="" aria-hidden="true" /></div><h2>Stratégie de réalisation</h2><p>Sourçage, efforts, déploiement ou migration</p></article>
+      <article>
+        <div class="illustration">
+          <img
+            :src="withBase('artm-bus-corner.png')"
+            alt=""
+            aria-hidden="true"
+          />
+        </div>
+        <h2>Mise en contexte</h2>
+        <p>Architecture actuelle, motivations et objectifs</p>
+      </article>
+      <article>
+        <div class="illustration">
+          <img
+            :src="withBase('artm-bus-panel.png')"
+            alt=""
+            aria-hidden="true"
+          />
+        </div>
+        <h2>Contraintes</h2>
+        <p>Contraintes d’affaires et technologiques actuelles</p>
+      </article>
+      <article>
+        <div class="illustration">
+          <img
+            :src="withBase('artm-bus-checklist.png')"
+            alt=""
+            aria-hidden="true"
+          />
+        </div>
+        <h2>Exigences</h2>
+        <p>Exigences technologiques</p>
+      </article>
+      <article>
+        <div class="illustration">
+          <img
+            :src="withBase('artm-bus-destination.png')"
+            alt=""
+            aria-hidden="true"
+          />
+        </div>
+        <h2>Architecture cible</h2>
+        <p>Vigie, requis fonctionnels et diagrammes</p>
+      </article>
+      <article>
+        <div class="illustration">
+          <img
+            :src="withBase('artm-bus-engine.png')"
+            alt=""
+            aria-hidden="true"
+          />
+        </div>
+        <h2>Stratégie de réalisation</h2>
+        <p>Sourçage, efforts, déploiement ou migration</p>
+      </article>
     </div>
-    <Footer :document-title="String($attrs.documentTitle || $slidev.configs.title)" />
+    <Footer
+      :document-title="String($attrs.documentTitle || $slidev.configs.title)"
+    />
   </div>
 </template>
 
@@ -50,7 +107,7 @@ const withBase = (path: string) => {
 .slidev-layout :deep(h1) {
   font-size: 1.6em;
   font-weight: 700;
-  color: var(--artm-primary, #003C60);
+  color: var(--artm-primary, #003c60);
   line-height: 1.2;
   margin: 0 0 0.5em;
   padding-bottom: 0.3em;
@@ -62,35 +119,35 @@ const withBase = (path: string) => {
   grid-template-columns: repeat(5, 1fr);
   gap: 0;
   margin: 42px auto;
-  border: 1px solid var(--artm-primary, #003C60);
+  border: 1px solid var(--artm-primary, #003c60);
   max-width: 90%;
 }
 
 .artm-agenda-grid article {
-  background-color: var(--artm-primary, #003C60);
+  background-color: var(--artm-primary, #003c60);
   min-height: 235px;
-  border-bottom: 1px solid var(--artm-primary, #003C60);
-  border-top: 1px solid var(--artm-primary, #003C60);
+  border-bottom: 1px solid var(--artm-primary, #003c60);
+  border-top: 1px solid var(--artm-primary, #003c60);
 }
 
 .artm-agenda-grid article .illustration {
-    padding: 20px;
-    width: 100%;
-    height: 150px;
+  padding: 20px;
+  width: 100%;
+  height: 150px;
 }
 
 .artm-agenda-grid article img {
-    width: auto;
-    max-height: 100%;
-    margin: auto;
+  width: auto;
+  max-height: 100%;
+  margin: auto;
 }
 
 .artm-agenda-grid article:first-child {
-  border-left: 1px solid var(--artm-primary, #003C60);
+  border-left: 1px solid var(--artm-primary, #003c60);
 }
 
 .artm-agenda-grid article:last-child {
-  border-right: 1px solid var(--artm-primary, #003C60);
+  border-right: 1px solid var(--artm-primary, #003c60);
 }
 
 .artm-agenda-grid h2 {
@@ -102,17 +159,17 @@ const withBase = (path: string) => {
   align-items: center;
   font-weight: 600;
   min-height: 55px;
-  border-bottom: 1px solid var(--artm-primary, #003C60);
+  border-bottom: 1px solid var(--artm-primary, #003c60);
   padding: 0 8%;
 }
 
 .artm-agenda-grid p {
-    background-color: var(--artm-bg, #FFFFFF);
-    font-size: .6rem;
-    padding: 8px;
-    min-height: 50px;
-    text-align: center;
-    display: grid;
-    align-items: center;
+  background-color: var(--artm-bg, #ffffff);
+  font-size: 0.6rem;
+  padding: 8px;
+  min-height: 50px;
+  text-align: center;
+  display: grid;
+  align-items: center;
 }
 </style>

@@ -1,8 +1,8 @@
 ---
-name: "Générer une présentation ARTM"
+name: 'Générer une présentation ARTM'
 description: "Génère ou met à jour slides.md à partir d'un contexte projet et d'éléments d'architecture, avec validation du format et des slides obligatoires."
 argument-hint: "Sujet, audience, contexte projet et éléments d'architecture à intégrer"
-agent: "agent"
+agent: 'agent'
 ---
 
 Génère ou mets à jour une présentation Slidev complète en français dans `slides.md`.

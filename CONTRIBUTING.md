@@ -57,6 +57,7 @@ For repositories reusing this template package:
 ## Pull Request Checklist
 
 1. Changes are limited to the intended scope.
-2. README instructions remain accurate.
-3. New/updated template files are consistent with each other.
-4. No secrets or sensitive data are committed.
+2. Local check passes: `docker compose run --rm slidev npm run check` (validates `package.json`, layouts, styles, components, and `slides.md` quality rules).
+3. README instructions remain accurate.
+4. New/updated template files are consistent with each other.
+5. No secrets or sensitive data are committed.

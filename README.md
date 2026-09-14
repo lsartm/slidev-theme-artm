@@ -37,13 +37,27 @@ docker compose down -v
 docker compose up --build
 ```
 
+## Validation et conformité (Checker)
+
+Pour valider l'intégrité du thème (structure `package.json`, styles CSS, layouts Vue, composants, `slides.md` et règles de présentation) et vérifier le build Slidev :
+
+```bash
+# Validation complète (linter de thème + build Slidev)
+docker compose run --rm slidev npm run check
+
+# Ou linter seul
+docker compose run --rm slidev npm run lint:theme
+```
+
+Un workflow GitHub Actions automatisé ([.github/workflows/check.yml](.github/workflows/check.yml)) valide également chaque Pull Request et push sur `main` / `develop`.
+
 ## Installation dans une présentation
 
 ![alt text](assets/image.png)
 
 ```yaml
 ---
-theme: slidev-theme-artm          # publié sur npm
+theme: slidev-theme-artm # publié sur npm
 # ou chemin local :
 theme: ../slidev-theme-artm
 ---
@@ -178,25 +192,24 @@ Produire :
 
 ## Mises en page disponibles
 
-| Layout | Frontmatter | Description |
-|--------|-------------|-------------|
-| `cover` | `presenter`, `date` | Diapositive de titre avec fond teal et logo |
-| `default` | `docTitle` | Contenu standard, titre avec séparateur teal |
-| `section` | `sectionNo` | Page de section – cercle blanc + icône + numéro |
-| `subsection` | `sectionNo` | Page de sous-section |
-| `two-cols` | `docTitle` | Deux colonnes avec slot `::header::` optionnel |
-| `statement` | — | Fond marine complet – mission, vision |
-| `end` | `website`, `address` | Conclusion avec « Merci ! » |
+| Layout       | Frontmatter          | Description                                     |
+| ------------ | -------------------- | ----------------------------------------------- |
+| `cover`      | `presenter`, `date`  | Diapositive de titre avec fond teal et logo     |
+| `default`    | `docTitle`           | Contenu standard, titre avec séparateur teal    |
+| `section`    | `sectionNo`          | Page de section – cercle blanc + icône + numéro |
+| `subsection` | `sectionNo`          | Page de sous-section                            |
+| `two-cols`   | `docTitle`           | Deux colonnes avec slot `::header::` optionnel  |
+| `statement`  | —                    | Fond marine complet – mission, vision           |
+| `end`        | `website`, `address` | Conclusion avec « Merci ! »                     |
 
 ### `cover`
 
 ```yaml
 ---
 layout: cover
-presenterName: "Prénom Nom"
-date: "Janvier 2025"
+presenterName: 'Prénom Nom'
+date: 'Janvier 2025'
 ---
-
 # Titre de la présentation
 
 Sous-titre ou description
@@ -207,9 +220,8 @@ Sous-titre ou description
 ```yaml
 ---
 layout: section
-sectionNo: "01"
+sectionNo: '01'
 ---
-
 # Titre de la section
 ```
 
@@ -225,6 +237,7 @@ layout: two-cols
 Contenu colonne gauche
 
 ::header::
+
 # Titre au-dessus des deux colonnes
 
 ::right::
@@ -240,8 +253,7 @@ Contenu colonne droite
 ---
 layout: end
 website: artm.quebec
-address: "700, rue De La Gauchetière Ouest, bureau 400, Montréal (Québec) H3B 5M2"
+address: '700, rue De La Gauchetière Ouest, bureau 400, Montréal (Québec) H3B 5M2'
 ---
-
 # Merci !
 ```

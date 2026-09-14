@@ -48,7 +48,9 @@ defineProps<{
         <slot name="right" />
       </div>
     </div>
-    <Footer :document-title="String($attrs.documentTitle || $slidev.configs.title)" />
+    <Footer
+      :document-title="String($attrs.documentTitle || $slidev.configs.title)"
+    />
   </div>
 </template>
 
@@ -59,7 +61,7 @@ defineProps<{
   height: 100%;
   width: 100%;
   padding: 0;
-  background-color: var(--artm-bg, #FFFFFF);
+  background-color: var(--artm-bg, #ffffff);
   position: relative;
 }
 
@@ -71,17 +73,17 @@ defineProps<{
 .tc-header :deep(h1) {
   font-size: 1.5em;
   font-weight: 700;
-  color: var(--artm-primary, #003C60);
+  color: var(--artm-primary, #003c60);
   line-height: 1.2;
   margin: 0 0 0.25em;
   padding-bottom: 0.25em;
-  border-bottom: 2px solid var(--artm-teal, #00B1AC);
+  border-bottom: 2px solid var(--artm-teal, #00b1ac);
 }
 
 .tc-header :deep(h2) {
   font-size: 1.05em;
   font-weight: 700;
-  color: var(--artm-primary, #003C60);
+  color: var(--artm-primary, #003c60);
   line-height: 1.3;
   margin: 0 0 0.3em;
   white-space: normal;
@@ -110,18 +112,18 @@ defineProps<{
 .tc-left :deep(h1) {
   font-size: 1.5em;
   font-weight: 700;
-  color: var(--artm-primary, #003C60);
+  color: var(--artm-primary, #003c60);
   line-height: 1.2;
   margin: 0 0 0.4em;
   padding-bottom: 0.3em;
-  border-bottom: 2px solid var(--artm-teal, #00B1AC);
+  border-bottom: 2px solid var(--artm-teal, #00b1ac);
 }
 
 .tc-left :deep(h3),
 .tc-right :deep(h3) {
   font-size: 0.95em;
   font-weight: 700;
-  color: var(--artm-primary, #003C60);
+  color: var(--artm-primary, #003c60);
   margin: 0 0 0.3em;
 }
 

@@ -16,10 +16,10 @@ Utiliser ces instructions avec le skill `project-slides` situé dans `.github/sk
 
 Avant toute modification de `slides.md` :
 
-1. Lire `slides.md` et l'utiliser comme blueprint officiel lorsqu'il existe déjà.
+1. Lire `slides.md` et analyser attentivement les indications, questions et attentes de contenu formulées dans chaque diapositive du modèle. Ces textes d'aide constituent la grille d'exigences et le cahier des charges sémantique à couvrir.
 2. Lire `templates/project-context.md` ou `project-context.md` lorsqu'il est disponible.
 3. Analyser les documents du dépôt pertinents : architecture, exigences, gouvernance, sécurité, exploitation et FinOPS.
-4. Comparer le prompt avec les informations disponibles.
+4. Comparer le prompt et les sources avec les attentes spécifiques de chaque diapositive du modèle pour y faire correspondre les bonnes informations.
 5. Identifier explicitement les informations manquantes, les hypothèses et les éléments qui ne peuvent pas être confirmés.
 
 Ne jamais inventer de faits, de dates, de coûts, de décisions, de risques ou de recommandations. En cas d'information absente, utiliser un espace réservé explicite et l'ajouter à la liste des éléments manquants.

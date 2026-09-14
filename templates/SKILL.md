@@ -92,9 +92,13 @@ Il définit :
 - les sections
 - les sous-sections
 - l'enchaînement narratif
+- les attentes de contenu pour chaque diapositive (instructions, questions à adresser, points clés à couvrir)
 - les exemples
 
 Toujours respecter la structure définie dans slides.md.
+
+**Prise en compte des attentes du modèle** :
+Avant de modifier ou remplacer le contenu d'une diapositive, lire attentivement les explications et consignes présentes dans la diapositive du modèle. Ces textes indiquent précisément ce que le comité et les architectes s'attendent à trouver dans cette slide (ex. contexte d'affaires, contraintes légales vs temporelles, exigences de SLO, stratégie de sourçage, modèle QLO, etc.). Le contenu du projet doit être extrait et adapté pour répondre explicitement à ces questions et attentes avant d'écraser les textes d'aide.
 
 Ne jamais inventer une autre structure lorsque slides.md fournit déjà un modèle.
 

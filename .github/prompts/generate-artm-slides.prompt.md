@@ -20,12 +20,13 @@ Génère ou mets à jour une présentation Slidev complète en français dans `s
 
 Avant de modifier le fichier :
 
-1. Lire `slides.md` et le respecter comme blueprint officiel.
+1. Lire `slides.md` et analyser les consignes, questions et descriptions d'attentes présentes dans chaque diapositive du modèle.
 2. Lire `templates/project-context.md` ou `project-context.md` s'il existe.
 3. Analyser les documents pertinents du dépôt, notamment l'architecture, les exigences, la gouvernance, la sécurité, l'exploitation et le FinOPS.
 4. Traiter la source documentaire brute comme une source de faits et de besoins, en supprimant les artefacts de présentation tels que les balises HTML, les styles CSS et les liens de suivi inutiles.
-5. Distinguer les besoins confirmés, les souhaits, les options à évaluer, les recommandations et les éléments non décidés.
-6. Respecter `.github/skills/project-slides/SKILL.md` et `.github/instructions/slidev-presentation.instructions.md` lorsqu'ils sont présents.
+5. Faire correspondre les informations du projet avec les attentes spécifiques de chaque slide modèle avant d'en remplacer le texte d'aide.
+6. Distinguer les besoins confirmés, les souhaits, les options à évaluer, les recommandations et les éléments non décidés.
+7. Respecter `.github/skills/project-slides/SKILL.md` et `.github/instructions/slidev-presentation.instructions.md` lorsqu'ils sont présents.
 
 Ne jamais inventer de faits, de coûts, de dates, de décisions, de risques ou de recommandations. Signaler les informations absentes et utiliser des placeholders explicites lorsque nécessaire.
 

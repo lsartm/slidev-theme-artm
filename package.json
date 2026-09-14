@@ -21,8 +21,9 @@
   },
   "scripts": {
     "dev": "slidev --open false --remote --port 3030 slides.md",
+    "clean": "node scripts/clean.mjs",
     "build": "slidev build slides.md --routerMode hash",
-    "build:clean": "slidev build slides.md --routerMode hash --without-notes",
+    "build:clean": "npm run clean && slidev build slides.md --routerMode hash --without-notes",
     "export": "slidev export slides.md",
     "format:check": "prettier --check .",
     "format": "prettier --write .",
@@ -30,7 +31,7 @@
     "lint:vue": "eslint \"layouts/**/*.vue\" \"components/**/*.vue\"",
     "lint:css": "stylelint \"styles/**/*.css\" \"layouts/**/*.vue\" \"components/**/*.vue\"",
     "typecheck": "vue-tsc --noEmit",
-    "check": "node scripts/check-theme.mjs && prettier --check . && eslint \"layouts/**/*.vue\" \"components/**/*.vue\" && stylelint \"styles/**/*.css\" \"layouts/**/*.vue\" \"components/**/*.vue\" && vue-tsc --noEmit && slidev build slides.md --routerMode hash"
+    "check": "npm run clean && node scripts/check-theme.mjs && prettier --check . && eslint \"layouts/**/*.vue\" \"components/**/*.vue\" && stylelint \"styles/**/*.css\" \"layouts/**/*.vue\" \"components/**/*.vue\" && vue-tsc --noEmit && slidev build slides.md --routerMode hash"
   },
   "dependencies": {
     "@slidev/cli": "^52.16.0",

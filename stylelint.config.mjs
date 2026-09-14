@@ -17,5 +17,5 @@ export default {
     ],
     'property-no-vendor-prefix': null,
   },
-  ignoreFiles: ['dist/**', 'node_modules/**', '.git/**']
+  ignoreFiles: ['dist/**', 'node_modules/**', '.git/**'],
 }

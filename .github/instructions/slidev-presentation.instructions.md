@@ -24,6 +24,19 @@ Avant toute modification de `slides.md` :
 
 Ne jamais inventer de faits, de dates, de coûts, de décisions, de risques ou de recommandations. En cas d'information absente, utiliser un espace réservé explicite et l'ajouter à la liste des éléments manquants.
 
+## Métadonnées de présentation
+
+Avant de compléter les slides, renseigner et contrôler le frontmatter de `slides.md` :
+
+- `title` doit contenir le titre réel et ne doit jamais rester `Titre du document` ;
+- `author` et `date` doivent être renseignés ou marqués explicitement `À confirmer` si l'information manque ;
+- `keywords` doit refléter le sujet, les capacités et les domaines concernés ;
+- `info` doit décrire brièvement le sujet et l'objectif ;
+- `htmlAttrs.lang` doit correspondre à la langue du deck ;
+- les propriétés utilisées par les layouts, notamment `presenter`, `presenterName`, `docTitle`, `sectionNo`, `subSectionNo`, `website` et `address`, doivent être cohérentes et complètes.
+
+Le titre du frontmatter alimente le pied de page du thème. Vérifier qu'aucun texte générique ou placeholder de démonstration n'est visible dans le footer ou sur la couverture.
+
 ## Règles de génération
 
 - Rédiger le contenu de la présentation en français, sauf les noms propres, noms de produits, technologies, commandes et extraits de code.
@@ -32,10 +45,14 @@ Ne jamais inventer de faits, de dates, de coûts, de décisions, de risques ou d
 - Ajouter les vues d'architecture pertinentes : contextuelle, fonctionnelle ou applicative, données et opérationnelle.
 - Utiliser Mermaid ou un tableau lorsque cela rend l'information plus claire.
 - Une diapositive doit porter un message principal clair.
+- Formuler des titres et sous-titres concis et percutants (privilégier moins de 60 caractères pour les sous-titres `##` dans `two-cols`) afin d'éviter les débordements de hauteur d'en-tête.
+- Veiller à ce que les diagrammes Mermaid restent compacts et adaptés à l'espace vertical disponible (notamment dans les colonnes `two-cols`), sans jamais dépasser ni passer sous le pied de page.
 - La présentation doit être autoportante et compréhensible sans narrateur, speaker, notes orales ou consultation de la documentation source.
 - Donner le contexte nécessaire aux diagrammes, tableaux, chiffres, acronymes et termes spécialisés.
 - Relier explicitement le contexte, les contraintes, les besoins, les enjeux, les décisions et la ou les solutions.
 - Les layouts `section` et `subsection` doivent contenir uniquement leur frontmatter et leurs titres ; placer tout contenu détaillé dans les slides suivantes.
+- Pour les slides en layout `two-cols` avec `::header::`, structurer impérativement le contenu dans l'ordre : contenu colonne gauche d'abord (slot par défaut), puis `::header::` avec `# Titre` et `## Sous-titre`, puis `::right::` avec le contenu colonne droite.
+- Sur la diapositive « Composition de la Qualité Globale et axes prioritaires », utiliser un diagramme Mermaid `pie` à gauche et le tableau à 8 axes à droite (`#1 SDLC`, `#2 Performance`, `#3 Sécurité`, `#4 Résilience`, `#5 Compétence`, `#6 Doc`, `#7 Inefficacité`, `#8 FinOps`). Les valeurs chiffrées de la colonne `Quantification` doivent être déduites du contexte ou qualifiées, et correspondre **exactement** aux valeurs du diagramme `pie`.
 - Ne pas générer une présentation vide, un simple squelette ou des diapositives constituées uniquement de placeholders lorsque l'information est disponible.
 
 ## Modèle et nombre de slides
@@ -67,6 +84,6 @@ La modification principale doit être réalisée dans `slides.md`.
 2. `Contenu couvert` : résumer les sections et vues d'architecture générées.
 3. `Hypothèses` : lister uniquement les hypothèses réellement utilisées.
 4. `Éléments manquants` : lister les informations absentes ou non confirmées.
-5. `Contrôles effectués` : confirmer la conservation des slides obligatoires, la langue française, la cohérence des layouts et le caractère autoportant de la présentation.
+5. `Contrôles effectués` : confirmer la conservation des slides obligatoires, la langue française, la cohérence des layouts, le caractère autoportant de la présentation et la complétude des métadonnées.
 
 Ne pas produire d'autre fichier de présentation sans demande explicite. Ne pas remplacer `slides.md` par un fichier de synthèse ou un plan incomplet.

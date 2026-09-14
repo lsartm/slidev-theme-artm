@@ -101,7 +101,11 @@ Le prompt `/generate-artm-slides` demande les informations variables suivantes :
 
 Les présentations générées doivent être autoportantes : la lecture des diapositives dans l'ordre doit suffire à comprendre le contexte, les contraintes, les besoins, les enjeux, les décisions et les solutions, sans narrateur, speaker, notes orales ou consultation de la documentation source. Les diagrammes, tableaux, chiffres, acronymes et termes spécialisés doivent être suffisamment contextualisés.
 
+Les métadonnées du frontmatter doivent également être traitées : titre réel, auteur ou équipe, date, mots-clés, description, langue et propriétés utilisées par les layouts. Le titre est repris dans le pied de page ; il ne doit donc jamais rester `Titre du document`. Lorsqu'une information manque, utiliser `À confirmer` et la déclarer dans les éléments manquants.
+
 Le nombre de slides peut évoluer. Les slides du modèle `slides.md` doivent d'abord être complétées, car elles représentent la base commune et les attentes connues des architectes. Des slides peuvent ensuite être ajoutées si nécessaire pour faire tenir tout le contenu de manière lisible et autoportante. Une slide ne peut être supprimée que si le contexte ne permet réellement pas de la renseigner ou si elle est manifestement hors périmètre ; toute suppression exceptionnelle doit être justifiée.
+
+La diapositive « Qualité Globale » doit obligatoirement utiliser un diagramme Mermaid `pie` dont les catégories et valeurs chiffrées reprennent fidèlement la colonne `Quantification` du tableau des 8 axes (`#1 SDLC`, `#2 Performance`, `#3 Sécurité`, `#4 Résilience`, `#5 Compétence`, `#6 Doc`, `#7 Inefficacité`, `#8 FinOps`), avec des qualifications déduites du contexte d'affaires et d'architecture.
 
 ### Exemple de prompt (générique)
 

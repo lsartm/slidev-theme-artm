@@ -15,14 +15,27 @@ const withBase = (path: string) => {
 
 <template>
   <div class="slidev-layout cover">
-    <img class="cover-bg" :src="props.coverBg ?? withBase('artm-bg-cover.png')" alt="" aria-hidden="true" />
-    <img class="cover-logo" :src="props.logoSrc ?? withBase('artm-logo.png')" alt="ARTM" />
+    <img
+      class="cover-bg"
+      :src="props.coverBg ?? withBase('artm-bg-cover.png')"
+      alt=""
+      aria-hidden="true"
+    />
+    <img
+      class="cover-logo"
+      :src="props.logoSrc ?? withBase('artm-logo.png')"
+      alt="ARTM"
+    />
     <div class="cover-content">
       <slot />
     </div>
     <div v-if="$slidev.configs.author || props.date" class="cover-presenter">
-      <div v-if="$slidev.configs.author" class="cover-label">Présenté par &nbsp;</div>
-      <div v-if="$slidev.configs.author" class="cover-name">{{ $slidev.configs.author }}</div>
+      <div v-if="$slidev.configs.author" class="cover-label">
+        Présenté par &nbsp;
+      </div>
+      <div v-if="$slidev.configs.author" class="cover-name">
+        {{ $slidev.configs.author }}
+      </div>
       <div v-if="props.date" class="cover-date">{{ props.date }}</div>
     </div>
   </div>
@@ -34,7 +47,7 @@ const withBase = (path: string) => {
   overflow: hidden;
   width: 100%;
   height: 100%;
-  background-color: var(--artm-bg, #FFFFFF);
+  background-color: var(--artm-bg, #ffffff);
 }
 
 .cover-bg {
@@ -67,7 +80,7 @@ const withBase = (path: string) => {
 .cover-content :deep(h1) {
   font-size: 2em;
   font-weight: 700;
-  color: var(--artm-primary, #003C60);
+  color: var(--artm-primary, #003c60);
   line-height: 1.15;
   margin: 0 0 0.4em;
 }
@@ -75,7 +88,7 @@ const withBase = (path: string) => {
 .cover-content :deep(p) {
   font-size: 1.1em;
   font-weight: 700;
-  color: var(--artm-primary, #003C60);
+  color: var(--artm-primary, #003c60);
   margin: 0;
   line-height: 1.3;
 }

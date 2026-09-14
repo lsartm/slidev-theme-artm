@@ -16,7 +16,12 @@ const withBase = (path: string) => {
 
 <template>
   <div class="slidev-layout statement">
-    <img class="statement-arrow" :src="iconSrc ?? withBase('artm-arrow.png')" alt="" aria-hidden="true" />
+    <img
+      class="statement-arrow"
+      :src="iconSrc ?? withBase('artm-arrow.png')"
+      alt=""
+      aria-hidden="true"
+    />
     <div class="statement-content">
       <slot />
     </div>
@@ -77,6 +82,6 @@ const withBase = (path: string) => {
 }
 
 .statement-content :deep(li::marker) {
-  color: var(--artm-teal, #00B1AC);
+  color: var(--artm-teal, #00b1ac);
 }
 </style>

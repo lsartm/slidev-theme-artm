@@ -59,6 +59,24 @@ Toujours analyser le contenu du dépôt avant de générer les diapositives.
 
 ---
 
+# Presentation Metadata Requirements
+
+Compléter et vérifier les métadonnées du frontmatter avant de générer le contenu :
+
+- `title` : titre réel de la présentation ; il ne doit jamais rester égal à `Titre du document` ou à un autre texte générique ;
+- `author` : auteur, présentateur ou équipe responsable ; utiliser un placeholder explicite si l'information est absente ;
+- `date` : date fournie par le contexte ; ne jamais l'inventer ;
+- `keywords` : mots-clés représentatifs du sujet, des capacités et des domaines concernés ;
+- `info` : courte description du sujet et de l'objectif de la présentation ;
+- `htmlAttrs.lang` : langue de la présentation ;
+- métadonnées propres aux layouts, comme `presenter`, `presenterName`, `docTitle`, `sectionNo`, `subSectionNo`, `website` et `address`, lorsqu'elles sont utilisées.
+
+Le titre du frontmatter est utilisé par le pied de page du thème. Il doit donc être renseigné avant toute génération afin d'éviter l'affichage de `Titre du document`. Vérifier également que le titre, l'auteur et la date affichés sur la couverture sont cohérents avec le frontmatter.
+
+Si une métadonnée n'est pas disponible, conserver la clé avec une valeur explicite comme `À confirmer` et la déclarer dans les éléments manquants. Ne jamais laisser une valeur de modèle ou de démonstration active dans la présentation finale.
+
+---
+
 # Presentation Blueprint
 
 Le fichier :
@@ -74,9 +92,13 @@ Il définit :
 - les sections
 - les sous-sections
 - l'enchaînement narratif
+- les attentes de contenu pour chaque diapositive (instructions, questions à adresser, points clés à couvrir)
 - les exemples
 
 Toujours respecter la structure définie dans slides.md.
+
+**Prise en compte des attentes du modèle** :
+Avant de modifier ou remplacer le contenu d'une diapositive, lire attentivement les explications et consignes présentes dans la diapositive du modèle. Ces textes indiquent précisément ce que le comité et les architectes s'attendent à trouver dans cette slide (ex. contexte d'affaires, contraintes légales vs temporelles, exigences de SLO, stratégie de sourçage, modèle QLO, etc.). Le contenu du projet doit être extrait et adapté pour répondre explicitement à ces questions et attentes avant d'écraser les textes d'aide.
 
 Ne jamais inventer une autre structure lorsque slides.md fournit déjà un modèle.
 
@@ -90,31 +112,31 @@ Sauf indication contraire, générer toutes les diapositives applicables du blue
 
 Structure attendue :
 
-01. Couverture
+1.  Couverture
 
-02. Contexte et objectif
+2.  Contexte et objectif
 
 Section — Mise en contexte
 
-03. Historique
+3.  Historique
 
-04. Motivations et objectifs
+4.  Motivations et objectifs
 
 Section — Contraintes
 
-05. Contraintes d'affaires et technologiques
+5.  Contraintes d'affaires et technologiques
 
 Section — Exigences
 
-06. Exigences obligatoires
+6.  Exigences obligatoires
 
-07. Exigences non fonctionnelles
+7.  Exigences non fonctionnelles
 
 Section — Architecture cible
 
-08. Résultats de la vigie
+8.  Résultats de la vigie
 
-09. Requis fonctionnels
+9.  Requis fonctionnels
 
 10. Description de la solution
 
@@ -175,6 +197,33 @@ La présentation finale doit être considérée comme une première version comp
 
 ---
 
+# Template And Slide Count Requirements
+
+Le nombre de diapositives peut évoluer selon la quantité et la complexité du contenu à présenter.
+
+- utiliser en priorité toutes les diapositives du modèle `slides.md` comme base de présentation ;
+- considérer ces diapositives comme la structure commune et les attentes connues des architectes ;
+- compléter d'abord les diapositives du modèle avant d'en ajouter de nouvelles ;
+- ajouter des diapositives lorsque cela est nécessaire pour présenter tout le contenu de façon lisible et autoportante ;
+- ne supprimer aucune diapositive du modèle sauf si le contexte du sujet ne permet réellement pas de la renseigner ou si elle est manifestement hors périmètre ;
+- justifier toute suppression exceptionnelle dans les hypothèses ou les éléments manquants du compte rendu final.
+
+Ne jamais supprimer une diapositive uniquement pour raccourcir la présentation, réduire le nombre de pages ou éviter de traiter son contenu.
+
+---
+
+# Slide Preservation Requirements
+
+Les diapositives suivantes sont obligatoires et ne doivent jamais être supprimées :
+
+- la première diapositive doit être conservée et complétée ;
+- la deuxième diapositive doit être conservée strictement à l'identique, y compris son frontmatter, son layout, son titre et son contenu ;
+- les deux dernières diapositives doivent être conservées et complétées.
+
+Lorsqu'une de ces diapositives contient des espaces réservés, les remplacer par le contenu disponible ou documenter les éléments manquants. Ne jamais supprimer ces diapositives pour simplifier ou réorganiser la présentation.
+
+---
+
 # Facts And Assumptions
 
 Ne jamais inventer :
@@ -219,18 +268,76 @@ Adapter le niveau de détail selon l'audience.
 
 Chaque diapositive doit communiquer une idée principale.
 
+- Rédiger des titres et sous-titres concis (éviter les phrases trop longues dans les en-têtes `##` des layouts `two-cols` pour ne pas comprimer les colonnes).
+- Dimensionner les diagrammes Mermaid de façon compacte pour qu'ils s'affichent lisiblement sans dépasser ni glisser sous le pied de page.
+
 Privilégier :
 
-- Diagrammes
-- Tableaux
-- Vues d'architecture
+- Diagrammes bien proportionnés
+- Tableaux synthétiques
+- Vues d'architecture lisibles
 - Résumés visuels
 
 Éviter :
 
+- Titres excessivement longs sur plusieurs lignes
+- Diagrammes verticaux démesurés
 - Longs paragraphes
 - Répétition
 - Texte inutile
+
+---
+
+# Self-Contained Presentation Requirement
+
+La présentation doit être autoportante : une personne doit pouvoir comprendre le contexte, les contraintes, les besoins, les enjeux, les options, la solution ou les solutions retenues et les prochaines étapes en lisant uniquement les diapositives.
+
+Pour chaque diapositive :
+
+- fournir les informations nécessaires à sa compréhension sans dépendre d'un narrateur, d'un speaker ou de notes orales ;
+- développer les acronymes et les termes spécialisés lors de leur première utilisation ;
+- expliciter les relations entre le contexte, les besoins, les contraintes, les enjeux, les décisions et la solution ;
+- donner suffisamment de contexte aux diagrammes, tableaux et chiffres pour qu'ils soient interprétables seuls ;
+- utiliser des titres formulés comme des messages lorsque cela améliore la compréhension.
+- les layouts `section` et `subsection` ne doivent contenir que leur frontmatter et leurs titres ; ne pas y ajouter de paragraphes, listes, tableaux, diagrammes ou autres contenus détaillés.
+
+Avant de terminer, vérifier que le fil narratif reste compréhensible si les diapositives sont lues dans l'ordre, sans présentation orale ni consultation de la documentation source.
+
+---
+
+# Layout Syntax Requirements
+
+Pour le layout `two-cols` avec en-tête partagé (`::header::`) :
+
+- Le contenu de la **colonne de gauche** se place en premier (slot par défaut).
+- L'en-tête partagé (`# Titre` et `## Sous-titre`) se place dans le slot `::header::`.
+- Le contenu de la **colonne de droite** se place dans le slot `::right::`.
+
+Exemple de syntaxe correcte :
+
+```md
+---
+layout: two-cols
+---
+
+### Titre colonne gauche
+
+Contenu gauche
+
+::header::
+
+# Titre de la diapositive
+
+## Sous-titre concis
+
+::right::
+
+### Titre colonne droite
+
+Contenu droit
+```
+
+Ne jamais placer `::header::` en tout début de slide sans contenu ou sans slot `::left::`, sous peine de rendre la colonne gauche vide et d'empiler le contenu verticalement dans l'en-tête.
 
 ---
 
@@ -246,6 +353,28 @@ Lorsque le contenu d'architecture est disponible, générer :
 - Vue opérationnelle
 
 Compléter toutes les vues applicables du blueprint.
+
+---
+
+# Qualité Globale (QLO) Requirement
+
+La diapositive « Composition de la Qualité Globale et axes prioritaires » (layout `two-cols`) suit une structure standardisée :
+
+- **Colonne de gauche** : un diagramme Mermaid de type `pie` intitulé `pie title Qualité globale`.
+- **Colonne de droite** : un tableau structuré d'évaluation des risques avec les 8 axes obligatoires :
+  1. `#1 SDLC`
+  2. `#2 Performance`
+  3. `#3 Sécurité`
+  4. `#4 Résilience`
+  5. `#5 Compétence`
+  6. `#6 Doc`
+  7. `#7 Inefficacité`
+  8. `#8 FinOps`
+- **Règle de cohérence stricte** :
+  - La colonne `Qualification` doit synthétiser l'enjeu, le risque ou la posture d'architecture déduite du contexte projet.
+  - La colonne `Quantification` doit contenir une valeur chiffrée (ex. note de 1 à 10 reflétant le niveau de risque, de criticité ou de priorité).
+  - Le diagramme `pie` Mermaid doit reprendre **exactement** les mêmes 8 catégories et les **mêmes valeurs chiffrées** que la colonne `Quantification` du tableau.
+  - Si les chiffres ne sont pas fournis explicitement dans le contexte source, ils doivent être déduits logiquement en fonction des priorités du sujet et rester strictement alignés entre le graphique et le tableau.
 
 ---
 

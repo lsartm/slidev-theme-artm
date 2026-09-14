@@ -9,110 +9,110 @@ A Slidev **theme** is an npm package that provides global styles, layouts, compo
 
 ## Core References
 
-| Topic | Description | Reference |
-|-------|-------------|-----------|
-| Markdown Syntax | Slide separators, frontmatter, notes, code blocks | [core-syntax](references/core-syntax.md) |
-| Animations | v-click, v-clicks, motion, transitions | [core-animations](references/core-animations.md) |
-| Headmatter | Deck-wide configuration options | [core-headmatter](references/core-headmatter.md) |
-| Frontmatter | Per-slide configuration options | [core-frontmatter](references/core-frontmatter.md) |
-| CLI Commands | Dev, build, export, theme commands | [core-cli](references/core-cli.md) |
-| Components | Built-in Vue components | [core-components](references/core-components.md) |
-| Layouts | Built-in slide layouts | [core-layouts](references/core-layouts.md) |
-| Exporting | PDF, PPTX, PNG export options | [core-exporting](references/core-exporting.md) |
-| Hosting | Build and deploy to various platforms | [core-hosting](references/core-hosting.md) |
-| Global Context | $nav, $slidev, composables API | [core-global-context](references/core-global-context.md) |
+| Topic           | Description                                       | Reference                                                |
+| --------------- | ------------------------------------------------- | -------------------------------------------------------- |
+| Markdown Syntax | Slide separators, frontmatter, notes, code blocks | [core-syntax](references/core-syntax.md)                 |
+| Animations      | v-click, v-clicks, motion, transitions            | [core-animations](references/core-animations.md)         |
+| Headmatter      | Deck-wide configuration options                   | [core-headmatter](references/core-headmatter.md)         |
+| Frontmatter     | Per-slide configuration options                   | [core-frontmatter](references/core-frontmatter.md)       |
+| CLI Commands    | Dev, build, export, theme commands                | [core-cli](references/core-cli.md)                       |
+| Components      | Built-in Vue components                           | [core-components](references/core-components.md)         |
+| Layouts         | Built-in slide layouts                            | [core-layouts](references/core-layouts.md)               |
+| Exporting       | PDF, PPTX, PNG export options                     | [core-exporting](references/core-exporting.md)           |
+| Hosting         | Build and deploy to various platforms             | [core-hosting](references/core-hosting.md)               |
+| Global Context  | $nav, $slidev, composables API                    | [core-global-context](references/core-global-context.md) |
 
 ## Feature References
 
 ### Code & Editor
 
-| Feature | Reference |
-|---------|-----------|
+| Feature           | Reference                                                      |
+| ----------------- | -------------------------------------------------------------- |
 | Line highlighting | [code-line-highlighting](references/code-line-highlighting.md) |
-| Line numbers | [code-line-numbers](references/code-line-numbers.md) |
-| Scrollable code | [code-max-height](references/code-max-height.md) |
-| Code tabs | [code-groups](references/code-groups.md) |
-| Monaco editor | [editor-monaco](references/editor-monaco.md) |
-| Run code | [editor-monaco-run](references/editor-monaco-run.md) |
-| Edit files | [editor-monaco-write](references/editor-monaco-write.md) |
-| Code animations | [code-magic-move](references/code-magic-move.md) |
-| TypeScript types | [code-twoslash](references/code-twoslash.md) |
-| Import code | [code-import-snippet](references/code-import-snippet.md) |
+| Line numbers      | [code-line-numbers](references/code-line-numbers.md)           |
+| Scrollable code   | [code-max-height](references/code-max-height.md)               |
+| Code tabs         | [code-groups](references/code-groups.md)                       |
+| Monaco editor     | [editor-monaco](references/editor-monaco.md)                   |
+| Run code          | [editor-monaco-run](references/editor-monaco-run.md)           |
+| Edit files        | [editor-monaco-write](references/editor-monaco-write.md)       |
+| Code animations   | [code-magic-move](references/code-magic-move.md)               |
+| TypeScript types  | [code-twoslash](references/code-twoslash.md)                   |
+| Import code       | [code-import-snippet](references/code-import-snippet.md)       |
 
 ### Diagrams & Math
 
-| Feature | Reference |
-|---------|-----------|
-| Mermaid | [diagram-mermaid](references/diagram-mermaid.md) |
-| PlantUML | [diagram-plantuml](references/diagram-plantuml.md) |
-| LaTeX math | [diagram-latex](references/diagram-latex.md) |
+| Feature    | Reference                                          |
+| ---------- | -------------------------------------------------- |
+| Mermaid    | [diagram-mermaid](references/diagram-mermaid.md)   |
+| PlantUML   | [diagram-plantuml](references/diagram-plantuml.md) |
+| LaTeX math | [diagram-latex](references/diagram-latex.md)       |
 
 ### Layout & Styling
 
-| Feature | Reference |
-|---------|-----------|
-| Canvas size | [layout-canvas-size](references/layout-canvas-size.md) |
-| Zoom | [layout-zoom](references/layout-zoom.md) |
-| Transform | [layout-transform](references/layout-transform.md) |
-| Layout slots | [layout-slots](references/layout-slots.md) |
-| Scoped CSS | [style-scoped](references/style-scoped.md) |
-| Global layers | [layout-global-layers](references/layout-global-layers.md) |
-| Draggable elements | [layout-draggable](references/layout-draggable.md) |
-| Icons | [style-icons](references/style-icons.md) |
+| Feature            | Reference                                                  |
+| ------------------ | ---------------------------------------------------------- |
+| Canvas size        | [layout-canvas-size](references/layout-canvas-size.md)     |
+| Zoom               | [layout-zoom](references/layout-zoom.md)                   |
+| Transform          | [layout-transform](references/layout-transform.md)         |
+| Layout slots       | [layout-slots](references/layout-slots.md)                 |
+| Scoped CSS         | [style-scoped](references/style-scoped.md)                 |
+| Global layers      | [layout-global-layers](references/layout-global-layers.md) |
+| Draggable elements | [layout-draggable](references/layout-draggable.md)         |
+| Icons              | [style-icons](references/style-icons.md)                   |
 
 ### Animation & Interaction
 
-| Feature | Reference |
-|---------|-----------|
-| Click animations | [core-animations](references/core-animations.md) |
-| Rough markers | [animation-rough-marker](references/animation-rough-marker.md) |
-| Drawing mode | [animation-drawing](references/animation-drawing.md) |
-| Direction styles | [style-direction](references/style-direction.md) |
+| Feature           | Reference                                                      |
+| ----------------- | -------------------------------------------------------------- |
+| Click animations  | [core-animations](references/core-animations.md)               |
+| Rough markers     | [animation-rough-marker](references/animation-rough-marker.md) |
+| Drawing mode      | [animation-drawing](references/animation-drawing.md)           |
+| Direction styles  | [style-direction](references/style-direction.md)               |
 | Note highlighting | [animation-click-marker](references/animation-click-marker.md) |
 
 ### Syntax Extensions
 
-| Feature | Reference |
-|---------|-----------|
-| Comark syntax | [syntax-comark](references/syntax-comark.md) |
-| Block frontmatter | [syntax-block-frontmatter](references/syntax-block-frontmatter.md) |
-| Import slides | [syntax-importing-slides](references/syntax-importing-slides.md) |
+| Feature           | Reference                                                              |
+| ----------------- | ---------------------------------------------------------------------- |
+| Comark syntax     | [syntax-comark](references/syntax-comark.md)                           |
+| Block frontmatter | [syntax-block-frontmatter](references/syntax-block-frontmatter.md)     |
+| Import slides     | [syntax-importing-slides](references/syntax-importing-slides.md)       |
 | Merge frontmatter | [syntax-frontmatter-merging](references/syntax-frontmatter-merging.md) |
 
 ### Presenter & Recording
 
-| Feature | Reference |
-|---------|-----------|
-| Recording | [presenter-recording](references/presenter-recording.md) |
-| Timer | [presenter-timer](references/presenter-timer.md) |
-| Remote | [presenter-remote](references/presenter-remote.md) |
+| Feature    | Reference                                                  |
+| ---------- | ---------------------------------------------------------- |
+| Recording  | [presenter-recording](references/presenter-recording.md)   |
+| Timer      | [presenter-timer](references/presenter-timer.md)           |
+| Remote     | [presenter-remote](references/presenter-remote.md)         |
 | Notes ruby | [presenter-notes-ruby](references/presenter-notes-ruby.md) |
 
 ### Export & Build
 
-| Feature | Reference |
-|---------|-----------|
-| Export | [core-exporting](references/core-exporting.md) |
-| Build & deploy | [core-hosting](references/core-hosting.md) |
-| Build with PDF | [build-pdf](references/build-pdf.md) |
-| Remote assets | [build-remote-assets](references/build-remote-assets.md) |
-| OG image | [build-og-image](references/build-og-image.md) |
-| SEO tags | [build-seo-meta](references/build-seo-meta.md) |
+| Feature        | Reference                                                |
+| -------------- | -------------------------------------------------------- |
+| Export         | [core-exporting](references/core-exporting.md)           |
+| Build & deploy | [core-hosting](references/core-hosting.md)               |
+| Build with PDF | [build-pdf](references/build-pdf.md)                     |
+| Remote assets  | [build-remote-assets](references/build-remote-assets.md) |
+| OG image       | [build-og-image](references/build-og-image.md)           |
+| SEO tags       | [build-seo-meta](references/build-seo-meta.md)           |
 
 ### Tools
 
-| Feature | Reference |
-|---------|-----------|
-| Eject theme | [tool-eject-theme](references/tool-eject-theme.md) |
-| Side editor | [editor-side](references/editor-side.md) |
-| VS Code extension | [editor-vscode](references/editor-vscode.md) |
-| Prettier | [editor-prettier](references/editor-prettier.md) |
+| Feature           | Reference                                          |
+| ----------------- | -------------------------------------------------- |
+| Eject theme       | [tool-eject-theme](references/tool-eject-theme.md) |
+| Side editor       | [editor-side](references/editor-side.md)           |
+| VS Code extension | [editor-vscode](references/editor-vscode.md)       |
+| Prettier          | [editor-prettier](references/editor-prettier.md)   |
 
 ### API
 
-| Feature | Reference |
-|---------|-----------|
-| Slide hooks | [api-slide-hooks](references/api-slide-hooks.md) |
+| Feature        | Reference                                                |
+| -------------- | -------------------------------------------------------- |
+| Slide hooks    | [api-slide-hooks](references/api-slide-hooks.md)         |
 | Navigation API | [core-global-context](references/core-global-context.md) |
 
 ## Scaffolding
@@ -215,19 +215,19 @@ Layouts override or extend Slidev's built-in layouts. The component **must** hav
 
 ### Built-in Layouts to Override
 
-| Layout | Purpose |
-|--------|---------|
-| `cover` | Title slide |
-| `default` | Standard slide |
-| `center` | Centered content |
-| `section` | Section divider |
-| `two-cols` | Two columns (uses `::right::` slot) |
-| `two-cols-header` | Header + two columns |
-| `intro` | Introduction slide |
-| `quote` | Quotation |
-| `statement` | Statement/fact |
-| `end` | Final slide |
-| `image-left` / `image-right` | Image + content |
+| Layout                       | Purpose                             |
+| ---------------------------- | ----------------------------------- |
+| `cover`                      | Title slide                         |
+| `default`                    | Standard slide                      |
+| `center`                     | Centered content                    |
+| `section`                    | Section divider                     |
+| `two-cols`                   | Two columns (uses `::right::` slot) |
+| `two-cols-header`            | Header + two columns                |
+| `intro`                      | Introduction slide                  |
+| `quote`                      | Quotation                           |
+| `statement`                  | Statement/fact                      |
+| `end`                        | Final slide                         |
+| `image-left` / `image-right` | Image + content                     |
 
 ### Layout with Named Slots
 
@@ -261,6 +261,7 @@ defineProps<{ src: string; alt?: string }>()
 ```
 
 Usage in slides:
+
 ```md
 <LogoBadge src="/logo.png" alt="ARTM" />
 ```
@@ -300,9 +301,11 @@ title: Theme Preview
 ---
 
 # Cover Slide
+
 subtitle: Preview deck
 
 ---
+
 layout: section
 ---
 
@@ -318,6 +321,7 @@ Regular content with **bold** and `code`.
 - Item two
 
 ---
+
 layout: two-cols
 ---
 
@@ -333,6 +337,7 @@ Right content
 ```
 
 Run preview:
+
 ```bash
 pnpm run dev   # opens http://localhost:3030
 ```
@@ -362,13 +367,13 @@ A project can use **one theme + multiple addons** simultaneously.
 
 ### When to use an addon vs a theme
 
-| Concern | Theme | Addon |
-|---------|-------|-------|
-| Global styles (colors, fonts) | ✅ | ⚠️ avoid |
-| Override built-in layouts (`cover`, `default`…) | ✅ | ⚠️ avoid |
-| **New custom layouts** | ✅ | ✅ preferred |
-| **Reusable Vue components** | ✅ | ✅ preferred |
-| Code runners / snippets | ❌ | ✅ |
+| Concern                                         | Theme | Addon        |
+| ----------------------------------------------- | ----- | ------------ |
+| Global styles (colors, fonts)                   | ✅    | ⚠️ avoid     |
+| Override built-in layouts (`cover`, `default`…) | ✅    | ⚠️ avoid     |
+| **New custom layouts**                          | ✅    | ✅ preferred |
+| **Reusable Vue components**                     | ✅    | ✅ preferred |
+| Code runners / snippets                         | ❌    | ✅           |
 
 ### Addon package.json
 
@@ -420,7 +425,7 @@ addons:
 
 ### ARTM packages
 
-| Package | Path | Purpose |
-|---------|------|---------|
-| `slidev-theme-artm` | `../slidev-theme-artm` | Colors, fonts, built-in layout overrides |
+| Package             | Path                   | Purpose                                                                                                                         |
+| ------------------- | ---------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
+| `slidev-theme-artm` | `../slidev-theme-artm` | Colors, fonts, built-in layout overrides                                                                                        |
 | `slidev-addon-artm` | `../slidev-addon-artm` | Custom layouts (`artm-agenda`, `artm-fact`, `artm-image-text`) + components (`ArtmLogo`, `ArtmCard`, `ArtmBadge`, `ArtmFooter`) |

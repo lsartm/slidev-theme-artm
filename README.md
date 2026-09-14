@@ -49,7 +49,7 @@ docker compose run --rm slidev npm run check
 docker compose run --rm slidev npm run lint:theme
 ```
 
-Un workflow GitHub Actions automatisé ([.github/workflows/check.yml](.github/workflows/check.yml)) valide également chaque Pull Request et push sur `main` / `develop`.
+Un workflow GitHub Actions automatisé ([.github/workflows/check.yml](.github/workflows/check.yml)) valide également chaque Pull Request et push sur `main`. Le déploiement automatique sur GitHub Pages ([.github/workflows/deploy.yml](.github/workflows/deploy.yml)) s'exécute lors de la fusion sur `main` (modèle **GitHub Flow**).
 
 ## Installation dans une présentation
 

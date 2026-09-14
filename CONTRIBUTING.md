@@ -9,6 +9,16 @@ This repository has two contribution tracks:
 1. Theme development and improvements for ARTM Slidev theme.
 2. Reusable template assets to help other projects generate Slidev decks quickly.
 
+## Branching Model (GitHub Flow)
+
+This project follows the **GitHub Flow** branching strategy:
+
+- The `main` branch is the production branch and is always deployable.
+- Any new feature, fix, or update is created on a dedicated feature branch branched from `main` (e.g., `feat/...`, `fix/...`, `chore/...`).
+- Open a Pull Request targeting `main`.
+- Automated CI checks ([.github/workflows/check.yml](.github/workflows/check.yml)) must pass on the PR.
+- Once reviewed and merged into `main`, GitHub Pages is automatically deployed ([.github/workflows/deploy.yml](.github/workflows/deploy.yml)).
+
 ## Local Workflow (Docker-first)
 
 Use Docker commands (no local Node.js required):
